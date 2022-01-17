@@ -1,0 +1,13 @@
+.heading{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+    @include heading-shadow;
+    
+    @media screen and (max-width: 600px) {
+        img{
+            width: 200px;
+            margin-top: 10px;
+        }
+    }
+}
