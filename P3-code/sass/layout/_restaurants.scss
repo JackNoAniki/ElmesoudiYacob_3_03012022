@@ -1,0 +1,152 @@
+.rst{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background: $bg-color-block;
+    
+    h2{
+        margin-top: 0;
+        margin-bottom: 30px;
+        margin-left: 20px;
+    }
+
+    a{
+        text-decoration: none;
+        color: black;
+    }
+
+    .rst__1{
+    @include card-rst;
+
+        &--img{
+            img{
+                @include img-rst;
+            }
+
+            &__btn{
+                p{
+                    margin: 0;
+                }
+                @include btn-rst;
+
+                &__title{
+                    p{
+                        @include title_p-rst;
+                    }
+                    font-weight: bold;
+
+                    &__loc{
+                        p{
+                            @include loc_p-rst;
+                        }
+
+                        &__ico{
+                            @include ico-rst;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .rst__2{
+    @include card-rst;
+
+        &--img{
+            img{
+                @include img-rst;
+            }
+
+            &__btn{
+                p{
+                    margin: 0;
+                }
+                @include btn-rst;
+
+                &__title{
+                    p{
+                        @include title_p-rst;
+                    }
+                    font-weight: bold;
+
+                    &__loc{
+                        p{
+                            @include loc_p-rst;
+                        }
+
+                        &__ico{
+                            @include ico-rst;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .rst__3{
+    @include card-rst;
+
+        &--img{
+            img{
+                @include img-rst;
+            }
+
+            &__btn{
+                p{
+                    margin: 0;
+                }
+                @include btn-rst;
+
+                &__title{
+                    p{
+                        @include title_p-rst;
+                    }
+                    font-weight: bold;
+
+                    &__loc{
+                        p{
+                            @include loc_p-rst;
+                        }
+
+                        &__ico{
+                            @include ico-rst;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .rst__4{
+    @include card-rst;
+
+        &--img{
+            img{
+                @include img-rst;
+            }
+
+            &__btn{
+                p{
+                    margin: 0;
+                }
+                @include btn-rst;
+
+                &__title{
+                    p{
+                        @include title_p-rst;
+                    }
+                    font-weight: bold;
+
+                    &__loc{
+                        p{
+                            @include loc_p-rst;
+                        }
+
+                        &__ico{
+                            @include ico-rst;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

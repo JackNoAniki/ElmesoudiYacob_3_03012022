@@ -1,6 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&display=swap");
+/* Mixins section "notice" */
+/* Mobile */
+/* Mixins section "rst" */
+/* Mobile*/
+/* Mixins footer */
+/* Mobile */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 * {
-  font-family: Raleway;
+  font-family: "Roboto", sans-serif;
+}
+
+footer .txt h3 {
+  font-family: "Shrikhand", cursive;
 }
 
 .heading {
@@ -182,6 +193,268 @@
   left: 90px;
   font-weight: bold;
   font-size: 18px;
+}
+
+.rst {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background: #E9E9E9;
+}
+.rst h2 {
+  margin-top: 0;
+  margin-bottom: 30px;
+  margin-left: 20px;
+}
+.rst a {
+  text-decoration: none;
+  color: black;
+}
+.rst .rst__1 {
+  position: relative;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: 1px 1px 5px 5px lightgray;
+}
+.rst .rst__1--img img {
+  width: 335px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+.rst .rst__1--img__btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 12px;
+  font-weight: bold;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background: #99E2D0;
+  color: #278870;
+}
+.rst .rst__1--img__btn p {
+  margin: 0;
+}
+.rst .rst__1--img__btn__title {
+  font-weight: bold;
+}
+.rst .rst__1--img__btn__title p {
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+.rst .rst__1--img__btn__title__loc p {
+  margin-left: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.rst .rst__1--img__btn__title__loc__ico {
+  position: absolute;
+  top: 190px;
+  right: 25px;
+}
+.rst .rst__2 {
+  position: relative;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: 1px 1px 5px 5px lightgray;
+}
+.rst .rst__2--img img {
+  width: 335px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+.rst .rst__2--img__btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 12px;
+  font-weight: bold;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background: #99E2D0;
+  color: #278870;
+}
+.rst .rst__2--img__btn p {
+  margin: 0;
+}
+.rst .rst__2--img__btn__title {
+  font-weight: bold;
+}
+.rst .rst__2--img__btn__title p {
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+.rst .rst__2--img__btn__title__loc p {
+  margin-left: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.rst .rst__2--img__btn__title__loc__ico {
+  position: absolute;
+  top: 190px;
+  right: 25px;
+}
+.rst .rst__3 {
+  position: relative;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: 1px 1px 5px 5px lightgray;
+}
+.rst .rst__3--img img {
+  width: 335px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+.rst .rst__3--img__btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 12px;
+  font-weight: bold;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background: #99E2D0;
+  color: #278870;
+}
+.rst .rst__3--img__btn p {
+  margin: 0;
+}
+.rst .rst__3--img__btn__title {
+  font-weight: bold;
+}
+.rst .rst__3--img__btn__title p {
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+.rst .rst__3--img__btn__title__loc p {
+  margin-left: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.rst .rst__3--img__btn__title__loc__ico {
+  position: absolute;
+  top: 190px;
+  right: 25px;
+}
+.rst .rst__4 {
+  position: relative;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: 1px 1px 5px 5px lightgray;
+}
+.rst .rst__4--img img {
+  width: 335px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+.rst .rst__4--img__btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 12px;
+  font-weight: bold;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background: #99E2D0;
+  color: #278870;
+}
+.rst .rst__4--img__btn p {
+  margin: 0;
+}
+.rst .rst__4--img__btn__title {
+  font-weight: bold;
+}
+.rst .rst__4--img__btn__title p {
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+.rst .rst__4--img__btn__title__loc p {
+  margin-left: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.rst .rst__4--img__btn__title__loc__ico {
+  position: absolute;
+  top: 190px;
+  right: 25px;
+}
+
+footer {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  background: #2d2f30;
+}
+footer .txt {
+  margin-left: 20px;
+}
+footer .txt h3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: normal;
+}
+footer .txt__link1 a {
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  margin-bottom: 10px;
+}
+footer .txt__link1 a p {
+  margin-bottom: 0;
+  margin-top: 0;
+  margin-left: 20px;
+}
+footer .txt__link1__link2 a {
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  margin-bottom: 10px;
+}
+footer .txt__link1__link2 a p {
+  margin-bottom: 0;
+  margin-top: 0;
+  margin-left: 20px;
+}
+footer .txt__link1__link2 i {
+  width: 13px;
+}
+footer .txt__link1__link2__link3 a {
+  text-decoration: none;
+  color: #fff;
+}
+footer .txt__link1__link2__link3 a p {
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+footer .txt__link1__link2__link3__link4 a {
+  text-decoration: none;
+  color: #fff;
+}
+footer .txt__link1__link2__link3__link4 a p {
+  margin-bottom: 10px;
+  margin-top: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
