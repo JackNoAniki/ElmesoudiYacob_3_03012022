@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.restaurant h2 {
+  font-family: "Shrikhand", cursive;
+}
+
+footer .txt h3 {
+  font-family: "Shrikhand", cursive;
+}
+
+/* Mixins restaurant */
+/* Mixins footer */
+* {
+  margin: 0;
+}
+
+.heading {
+  padding-bottom: 15px;
+}
+.heading__arrow {
+  text-decoration: none;
+  color: #000;
+  position: relative;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+.heading img {
+  position: absolute;
+  top: 10px;
+  left: 87px;
+  width: 200px;
+}
+
+.restaurant img {
+  width: 375px;
+  position: relative;
+}
+.restaurant__txt {
+  position: absolute;
+  width: 335px;
+  top: 240px;
+  background-color: #E9E9E9;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 15px;
+  border-radius: 40px 40px 0 0;
+}
+.restaurant__txt__title {
+  margin-bottom: 30px;
+}
+.restaurant__txt__title__heart {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+}
+.restaurant__txt__title__heart--modif {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+}
+.restaurant__txt__entrees h3:after {
+  content: "";
+  display: block;
+  width: 15%;
+  border-bottom: 3px solid #99E2D0;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+.restaurant__txt__entrees__1 {
+  position: relative;
+  padding-left: 10px;
+  background-color: #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 15px 15px 15px 15px;
+  box-shadow: 0px 3px 3px 0px #C0C0C0;
+}
+.restaurant__txt__entrees__1 h4 {
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+.restaurant__txt__entrees__1__price {
+  position: absolute;
+  top: 38px;
+  right: 22px;
+  font-weight: bold;
+}
+
+footer {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  background: #2d2f30;
+  position: fixed;
+  bottom: 0;
+  width: 375px;
+}
+footer .txt {
+  margin-left: 20px;
+}
+footer .txt h3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: normal;
+}
+footer .txt__link1 a {
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  margin-bottom: 10px;
+}
+footer .txt__link1 a p {
+  margin-bottom: 0;
+  margin-top: 0;
+  margin-left: 20px;
+}
+footer .txt__link1__link2 a {
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  margin-bottom: 10px;
+}
+footer .txt__link1__link2 a p {
+  margin-bottom: 0;
+  margin-top: 0;
+  margin-left: 20px;
+}
+footer .txt__link1__link2 i {
+  width: 13px;
+}
+footer .txt__link1__link2__link3 a {
+  text-decoration: none;
+  color: #fff;
+}
+footer .txt__link1__link2__link3 a p {
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+footer .txt__link1__link2__link3__link4 a {
+  text-decoration: none;
+  color: #fff;
+}
+footer .txt__link1__link2__link3__link4 a p {
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+/*# sourceMappingURL=style.css.map */

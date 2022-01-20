@@ -1,0 +1,44 @@
+.restaurant{
+    img{
+        width: 375px;
+        position: relative;
+    }
+
+    &__txt{
+        @include restaurant-block;
+
+        &__title{
+            margin-bottom: 30px;
+            &__heart{
+                position: absolute;
+                top: 15px;
+                right: 25px;
+            
+                &--modif{
+                    position: absolute;
+                    top: 15px;
+                    right: 25px;    
+                }           
+            }
+        }
+
+        &__entrees{
+        h3{
+            @include restaurant-h3-border;
+        }
+
+            &__1{
+                position: relative;
+                h4{
+                    @include restaurant-h4-specs;
+                }
+                @include restaurant-food-specs;
+
+                &__price{
+                    @include restaurant-price-specs;
+                }
+            }
+            
+        }
+    }
+}

@@ -1,4 +1,4 @@
-.rst{
+.restaurant{
     padding-top: 40px;
     padding-bottom: 40px;
     background: $bg-color-block;
@@ -14,7 +14,7 @@
         color: black;
     }
 
-    .rst__1{
+    .restaurant__1{
     @include card-rst;
 
         &--img{
@@ -40,7 +40,21 @@
                         }
 
                         &__ico{
+                            z-index: auto;
                             @include ico-rst;
+                            &:hover{
+                                display: none;
+                            }
+
+                            &--modif{
+                                z-index: auto;
+                                @include ico-rst;
+                                opacity: 0; 
+                                &:hover{
+                                    opacity: 1;
+                                    @include ico-rst-fly;
+                                }
+                            }
                         }
                     }
                 }
@@ -48,7 +62,7 @@
         }
     }
 
-    .rst__2{
+    .restaurant__2{
     @include card-rst;
 
         &--img{
@@ -75,6 +89,15 @@
 
                         &__ico{
                             @include ico-rst;
+
+                            &--modif{
+                                @include ico-rst;
+                                opacity: 0; 
+                                &:hover{
+                                    opacity: 1;
+                                    @include ico-rst-fly;
+                                }
+                            }
                         }
                     }
                 }
@@ -82,7 +105,7 @@
         }
     }
 
-    .rst__3{
+    .restaurant__3{
     @include card-rst;
 
         &--img{
@@ -109,14 +132,23 @@
 
                         &__ico{
                             @include ico-rst;
-                        }
+
+                            &--modif{
+                                @include ico-rst;
+                                opacity: 0;
+                                &:hover{
+                                    opacity: 1;
+                                    @include ico-rst-fly;
+                                }
+                            }
+                        }                            
                     }
                 }
             }
         }
     }
 
-    .rst__4{
+    .restaurant__4{
     @include card-rst;
 
         &--img{
@@ -143,6 +175,15 @@
 
                         &__ico{
                             @include ico-rst;
+
+                            &--modif{
+                                @include ico-rst;
+                                opacity: 0;
+                                &:hover{
+                                    opacity: 1;
+                                    @include ico-rst-fly;
+                                }
+                            }
                         }
                     }
                 }

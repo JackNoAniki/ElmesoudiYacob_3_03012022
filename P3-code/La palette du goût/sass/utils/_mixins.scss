@@ -1,0 +1,73 @@
+/* Mixins restaurant */
+@mixin restaurant-block{
+        position: absolute;
+        width: 335px;
+        top: 240px;
+        background-color: $bg-color-block;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 15px;
+        border-radius: 40px 40px 0 0;
+}
+
+@mixin restaurant-h3-border{
+        &:after{
+            content:'';
+            display: block;
+            width: 15%;
+            border-bottom: 3px solid $color-tertiary;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+}
+
+@mixin restaurant-h4-specs{
+    margin-bottom: 8px;
+    font-size: map-get($font-size, standard);
+}
+
+@mixin restaurant-food-specs{
+    padding-left: 10px;
+    background-color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 0px 3px 3px 0px #C0C0C0;
+}
+
+@mixin restaurant-price-specs{
+    position: absolute;
+    top: 38px;
+    right: 22px;
+    font-weight: bold;
+}
+
+
+
+/* Mixins footer */
+@mixin footer-link-logo{
+    a{
+        text-decoration: none;
+        color: #fff;
+        display: flex;
+        margin-bottom: 10px;
+
+        p{
+            margin-bottom: 0;
+            margin-top: 0;
+            margin-left: 20px;
+        }
+    }
+}
+
+@mixin footer-link{
+    a{
+        text-decoration: none;
+        color: #fff;
+
+        p{
+            margin-bottom: 10px;
+            margin-top: 0;
+        }
+    }
+}
