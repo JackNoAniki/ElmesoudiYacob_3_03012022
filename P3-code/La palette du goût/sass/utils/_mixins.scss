@@ -1,12 +1,13 @@
 /* Mixins restaurant */
 @mixin restaurant-block{
-        position: absolute;
+        position: relative;
         width: 335px;
-        top: 240px;
+
         background-color: $bg-color-block;
         padding-left: 20px;
         padding-right: 20px;
         padding-top: 15px;
+        padding-bottom: 15px;
         border-radius: 40px 40px 0 0;
 }
 

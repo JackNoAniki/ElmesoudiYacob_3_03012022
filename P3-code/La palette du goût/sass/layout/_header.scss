@@ -4,19 +4,20 @@
 
 .heading{
     padding-bottom: 15px;
-    &__arrow{
+    a{
         text-decoration: none;
         color: #000;
+    }
+    &__arrow{
         position: relative;
         padding-top: 10px;
         padding-left: 20px;
         
     }
-
     img{
         position: absolute;
         top: 10px;
         left: 87px;
         width: 200px;
-    }   
+    }
 }

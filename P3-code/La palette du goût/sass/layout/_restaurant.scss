@@ -1,8 +1,9 @@
 .restaurant{
     img{
+        display: block;
         width: 375px;
-        position: relative;
-    }
+        margin-bottom: -35px;
+    }   
 
     &__txt{
         @include restaurant-block;
@@ -154,6 +155,17 @@
                 &__price{
                     @include restaurant-price-specs;
                 }
+            }
+        }
+
+        &--btn{
+            @include bouton;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            a{
+                text-decoration: none;
+                text-align: center;
+                color: #fff;
             }
         }
     }
