@@ -24,10 +24,11 @@
 
         &__entrees{
         h3{
-            @include restaurant-h3-border;
+            @include restaurant-h3-specs;
         }
 
             &__1{
+                margin-bottom: 10px;
                 position: relative;
                 h4{
                     @include restaurant-h4-specs;
@@ -39,6 +40,121 @@
                 }
             }
             
+            &__2{
+                margin-bottom: 10px;
+                position: relative;
+                h4{
+                    @include restaurant-h4-specs;
+                }
+                @include restaurant-food-specs;
+
+                &__price{
+                    @include restaurant-price-specs;
+                }
+            }
+
+            &__3{
+                margin-bottom: 10px;
+                position: relative;
+                h4{
+                    @include restaurant-h4-specs;
+                }
+                @include restaurant-food-specs;
+
+                &__price{
+                    @include restaurant-price-specs;
+                }
+            }
+        }
+
+        &__plats{
+            h3{
+                @include restaurant-h3-specs;
+            }
+    
+            &__1{
+                margin-bottom: 10px;
+                position: relative;
+                h4{
+                    @include restaurant-h4-specs;
+                }
+                @include restaurant-food-specs;
+
+                &__price{
+                    @include restaurant-price-specs;
+                }
+            }
+            
+            &__2{
+                margin-bottom: 10px;
+                position: relative;
+                h4{
+                    @include restaurant-h4-specs;
+                }
+                @include restaurant-food-specs;
+
+                &__price{
+                    @include restaurant-price-specs;
+                }
+            }
+
+            &__3{
+                margin-bottom: 10px;
+                position: relative;
+                h4{
+                    @include restaurant-h4-specs;
+                }
+                @include restaurant-food-specs;
+
+                &__price{
+                    @include restaurant-price-specs;
+                }
+            }
+        }
+
+        &__desserts{
+            h3{
+                @include restaurant-h3-specs;
+            }
+    
+            &__1{
+                margin-bottom: 10px;
+                position: relative;
+                h4{
+                    @include restaurant-h4-specs;
+                }
+                @include restaurant-food-specs;
+
+                &__price{
+                    @include restaurant-price-specs;
+                }
+            }
+            
+            &__2{
+                margin-bottom: 10px;
+                position: relative;
+                h4{
+                    @include restaurant-h4-specs;
+                }
+                @include restaurant-food-specs;
+
+                &__price{
+                    @include restaurant-price-specs;
+                }
+            }
+
+            &__3{
+                margin-bottom: 10px;
+                position: relative;
+                h4{
+                    @include restaurant-h4-specs;
+                }
+                @include restaurant-food-specs;
+
+                &__price{
+                    @include restaurant-price-specs;
+                }
+            }
         }
     }
 }

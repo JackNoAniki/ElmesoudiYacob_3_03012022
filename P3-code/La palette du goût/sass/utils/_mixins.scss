@@ -10,7 +10,9 @@
         border-radius: 40px 40px 0 0;
 }
 
-@mixin restaurant-h3-border{
+@mixin restaurant-h3-specs{
+    font-weight: normal;
+    margin-top: 50px;
         &:after{
             content:'';
             display: block;
