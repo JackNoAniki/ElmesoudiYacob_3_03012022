@@ -5,167 +5,52 @@
         margin-bottom: -35px;
     }   
 
-    &__txt{
+    &__block{
         @include restaurant-block;
 
         &__title{
-            margin-bottom: 30px;
-            &__heart{
-                position: absolute;
-                top: 15px;
-                right: 25px;
-            
-                &--modif{
-                    position: absolute;
-                    top: 15px;
-                    right: 25px;    
-                }           
-            }
+        margin-bottom: 30px;
         }
 
-        &__entrees{
+        &__icon{
+            position: absolute;
+            top: 15px;
+            right: 25px;
+
+            &--modif{
+                position: absolute;
+                top: 15px;
+                right: 25px;    
+            } 
+        }          
+
+        &__card{
         h3{
             @include restaurant-h3-specs;
         }
 
-            &__1{
+            &__txt{
                 margin-bottom: 10px;
                 position: relative;
                 h4{
                     @include restaurant-h4-specs;
                 }
                 @include restaurant-food-specs;
-
-                &__price{
-                    @include restaurant-price-specs;
-                }
-            }
-            
-            &__2{
-                margin-bottom: 10px;
-                position: relative;
-                h4{
-                    @include restaurant-h4-specs;
-                }
-                @include restaurant-food-specs;
-
-                &__price{
-                    @include restaurant-price-specs;
-                }
             }
 
-            &__3{
-                margin-bottom: 10px;
-                position: relative;
-                h4{
-                    @include restaurant-h4-specs;
-                }
-                @include restaurant-food-specs;
-
-                &__price{
-                    @include restaurant-price-specs;
-                }
-            }
-        }
-
-        &__plats{
-            h3{
-                @include restaurant-h3-specs;
-            }
-    
-            &__1{
-                margin-bottom: 10px;
-                position: relative;
-                h4{
-                    @include restaurant-h4-specs;
-                }
-                @include restaurant-food-specs;
-
-                &__price{
-                    @include restaurant-price-specs;
-                }
-            }
-            
-            &__2{
-                margin-bottom: 10px;
-                position: relative;
-                h4{
-                    @include restaurant-h4-specs;
-                }
-                @include restaurant-food-specs;
-
-                &__price{
-                    @include restaurant-price-specs;
-                }
+            &__price{
+                @include restaurant-price-specs;
             }
 
-            &__3{
-                margin-bottom: 10px;
-                position: relative;
-                h4{
-                    @include restaurant-h4-specs;
+            &--btn{
+                @include bouton;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                a{
+                    text-decoration: none;
+                    text-align: center;
+                    color: #fff;
                 }
-                @include restaurant-food-specs;
-
-                &__price{
-                    @include restaurant-price-specs;
-                }
-            }
-        }
-
-        &__desserts{
-            h3{
-                @include restaurant-h3-specs;
-            }
-    
-            &__1{
-                margin-bottom: 10px;
-                position: relative;
-                h4{
-                    @include restaurant-h4-specs;
-                }
-                @include restaurant-food-specs;
-
-                &__price{
-                    @include restaurant-price-specs;
-                }
-            }
-            
-            &__2{
-                margin-bottom: 10px;
-                position: relative;
-                h4{
-                    @include restaurant-h4-specs;
-                }
-                @include restaurant-food-specs;
-
-                &__price{
-                    @include restaurant-price-specs;
-                }
-            }
-
-            &__3{
-                margin-bottom: 10px;
-                position: relative;
-                h4{
-                    @include restaurant-h4-specs;
-                }
-                @include restaurant-food-specs;
-
-                &__price{
-                    @include restaurant-price-specs;
-                }
-            }
-        }
-
-        &--btn{
-            @include bouton;
-            margin-top: 30px;
-            margin-bottom: 30px;
-            a{
-                text-decoration: none;
-                text-align: center;
-                color: #fff;
             }
         }
     }

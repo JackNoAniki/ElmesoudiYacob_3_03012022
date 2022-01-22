@@ -42,7 +42,7 @@ footer .txt h3 {
   width: 375px;
   margin-bottom: -35px;
 }
-.restaurant__txt {
+.restaurant__block {
   position: relative;
   width: 335px;
   background-color: #E9E9E9;
@@ -52,24 +52,24 @@ footer .txt h3 {
   padding-bottom: 15px;
   border-radius: 40px 40px 0 0;
 }
-.restaurant__txt__title {
+.restaurant__block__title {
   margin-bottom: 30px;
 }
-.restaurant__txt__title__heart {
+.restaurant__block__icon {
   position: absolute;
   top: 15px;
   right: 25px;
 }
-.restaurant__txt__title__heart--modif {
+.restaurant__block__icon--modif {
   position: absolute;
   top: 15px;
   right: 25px;
 }
-.restaurant__txt__entrees h3 {
+.restaurant__block__card h3 {
   font-weight: normal;
   margin-top: 50px;
 }
-.restaurant__txt__entrees h3:after {
+.restaurant__block__card h3:after {
   content: "";
   display: block;
   width: 15%;
@@ -77,7 +77,7 @@ footer .txt h3 {
   margin-top: 5px;
   margin-bottom: 15px;
 }
-.restaurant__txt__entrees__1 {
+.restaurant__block__card__txt {
   margin-bottom: 10px;
   position: relative;
   padding-left: 10px;
@@ -87,201 +87,17 @@ footer .txt h3 {
   border-radius: 15px 15px 15px 15px;
   box-shadow: 0px 3px 3px 0px #C0C0C0;
 }
-.restaurant__txt__entrees__1 h4 {
+.restaurant__block__card__txt h4 {
   margin-bottom: 8px;
   font-size: 18px;
 }
-.restaurant__txt__entrees__1__price {
+.restaurant__block__card__price {
   position: absolute;
   top: 38px;
   right: 22px;
   font-weight: bold;
 }
-.restaurant__txt__entrees__2 {
-  margin-bottom: 10px;
-  position: relative;
-  padding-left: 10px;
-  background-color: #fff;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 15px 15px 15px 15px;
-  box-shadow: 0px 3px 3px 0px #C0C0C0;
-}
-.restaurant__txt__entrees__2 h4 {
-  margin-bottom: 8px;
-  font-size: 18px;
-}
-.restaurant__txt__entrees__2__price {
-  position: absolute;
-  top: 38px;
-  right: 22px;
-  font-weight: bold;
-}
-.restaurant__txt__entrees__3 {
-  margin-bottom: 10px;
-  position: relative;
-  padding-left: 10px;
-  background-color: #fff;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 15px 15px 15px 15px;
-  box-shadow: 0px 3px 3px 0px #C0C0C0;
-}
-.restaurant__txt__entrees__3 h4 {
-  margin-bottom: 8px;
-  font-size: 18px;
-}
-.restaurant__txt__entrees__3__price {
-  position: absolute;
-  top: 38px;
-  right: 22px;
-  font-weight: bold;
-}
-.restaurant__txt__plats h3 {
-  font-weight: normal;
-  margin-top: 50px;
-}
-.restaurant__txt__plats h3:after {
-  content: "";
-  display: block;
-  width: 15%;
-  border-bottom: 3px solid #99E2D0;
-  margin-top: 5px;
-  margin-bottom: 15px;
-}
-.restaurant__txt__plats__1 {
-  margin-bottom: 10px;
-  position: relative;
-  padding-left: 10px;
-  background-color: #fff;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 15px 15px 15px 15px;
-  box-shadow: 0px 3px 3px 0px #C0C0C0;
-}
-.restaurant__txt__plats__1 h4 {
-  margin-bottom: 8px;
-  font-size: 18px;
-}
-.restaurant__txt__plats__1__price {
-  position: absolute;
-  top: 38px;
-  right: 22px;
-  font-weight: bold;
-}
-.restaurant__txt__plats__2 {
-  margin-bottom: 10px;
-  position: relative;
-  padding-left: 10px;
-  background-color: #fff;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 15px 15px 15px 15px;
-  box-shadow: 0px 3px 3px 0px #C0C0C0;
-}
-.restaurant__txt__plats__2 h4 {
-  margin-bottom: 8px;
-  font-size: 18px;
-}
-.restaurant__txt__plats__2__price {
-  position: absolute;
-  top: 38px;
-  right: 22px;
-  font-weight: bold;
-}
-.restaurant__txt__plats__3 {
-  margin-bottom: 10px;
-  position: relative;
-  padding-left: 10px;
-  background-color: #fff;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 15px 15px 15px 15px;
-  box-shadow: 0px 3px 3px 0px #C0C0C0;
-}
-.restaurant__txt__plats__3 h4 {
-  margin-bottom: 8px;
-  font-size: 18px;
-}
-.restaurant__txt__plats__3__price {
-  position: absolute;
-  top: 38px;
-  right: 22px;
-  font-weight: bold;
-}
-.restaurant__txt__desserts h3 {
-  font-weight: normal;
-  margin-top: 50px;
-}
-.restaurant__txt__desserts h3:after {
-  content: "";
-  display: block;
-  width: 15%;
-  border-bottom: 3px solid #99E2D0;
-  margin-top: 5px;
-  margin-bottom: 15px;
-}
-.restaurant__txt__desserts__1 {
-  margin-bottom: 10px;
-  position: relative;
-  padding-left: 10px;
-  background-color: #fff;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 15px 15px 15px 15px;
-  box-shadow: 0px 3px 3px 0px #C0C0C0;
-}
-.restaurant__txt__desserts__1 h4 {
-  margin-bottom: 8px;
-  font-size: 18px;
-}
-.restaurant__txt__desserts__1__price {
-  position: absolute;
-  top: 38px;
-  right: 22px;
-  font-weight: bold;
-}
-.restaurant__txt__desserts__2 {
-  margin-bottom: 10px;
-  position: relative;
-  padding-left: 10px;
-  background-color: #fff;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 15px 15px 15px 15px;
-  box-shadow: 0px 3px 3px 0px #C0C0C0;
-}
-.restaurant__txt__desserts__2 h4 {
-  margin-bottom: 8px;
-  font-size: 18px;
-}
-.restaurant__txt__desserts__2__price {
-  position: absolute;
-  top: 38px;
-  right: 22px;
-  font-weight: bold;
-}
-.restaurant__txt__desserts__3 {
-  margin-bottom: 10px;
-  position: relative;
-  padding-left: 10px;
-  background-color: #fff;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 15px 15px 15px 15px;
-  box-shadow: 0px 3px 3px 0px #C0C0C0;
-}
-.restaurant__txt__desserts__3 h4 {
-  margin-bottom: 8px;
-  font-size: 18px;
-}
-.restaurant__txt__desserts__3__price {
-  position: absolute;
-  top: 38px;
-  right: 22px;
-  font-weight: bold;
-}
-.restaurant__txt--btn {
+.restaurant__block__card--btn {
   margin: 0;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -294,7 +110,7 @@ footer .txt h3 {
   margin-top: 30px;
   margin-bottom: 30px;
 }
-.restaurant__txt--btn a {
+.restaurant__block__card--btn a {
   text-decoration: none;
   text-align: center;
   color: #fff;
