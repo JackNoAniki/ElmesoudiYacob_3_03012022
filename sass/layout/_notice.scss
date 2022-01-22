@@ -1,7 +1,6 @@
 .notice{
     margin-right: 20px;
     margin-left: 20px;
-    position: relative;
 
     h2{
         margin-top: 60px;
@@ -10,77 +9,29 @@
     p{
         margin: 0;
     }
-
-    &__1{
-        top: 65px;
-        @include notice-nbr;
-    }
     
-    .notice__step1{
-        @include btn-notice;
+    &__step{
+        position: relative;
+        @include notice-btn;
+
+        &__number{
+            top: 15px;
+            left: -10px;
+            @include notice-number;
+        }
 
         &--i{
             position: absolute;
-            top: 75px;
+            top: 25px;
             left: map-get($notice-elm-pos, i-pos);
         }
 
-            &--i__txt{
-                position: absolute;
-                font-weight: bold;
-                left: map-get($notice-elm-pos, txt-pos);
-                top: 75px;
-                font-size: map-get($font-size, standard);
-            }
-    }
-
-    &__2{
-        position: absolute;
-        top: 155px;
-        @include notice-nbr;
-    }
-
-    .notice__step2{
-        @include btn-notice;
-
-        &--i{
+        &__txt{
             position: absolute;
-            top: 165px;
-            left: map-get($notice-elm-pos, i-pos);
+            font-weight: bold;
+            left: map-get($notice-elm-pos, txt-pos);
+            top: 25px;
+            font-size: map-get($font-size, standard);
         }
-
-            &--i__txt{
-                position: absolute;
-                top: 165px;
-                left: map-get($notice-elm-pos, txt-pos);
-                font-weight: bold;
-                font-size: map-get($font-size, standard);
-            }
     }
-
-    &__3{
-        position: absolute;
-        top: 245px;
-        @include notice-nbr;
-
-    }
-
-    .notice__step3{
-        @include btn-notice;
-
-        &--i{
-            position: absolute;
-            top: 255px;
-            left: map-get($notice-elm-pos, i-pos);
-        }
-
-            &--i__txt{
-                position: absolute;
-                top: 255px;
-                left: map-get($notice-elm-pos, txt-pos);
-                font-weight: bold;
-                font-size: map-get($font-size, standard);
-            }
-    }
-    
 }

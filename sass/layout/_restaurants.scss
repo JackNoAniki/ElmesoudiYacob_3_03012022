@@ -14,178 +14,49 @@
         color: black;
     }
 
-    .restaurant__1{
-    @include card-rst;
+    &__card{
+    @include card-restaurant;
 
         &--img{
             img{
-                @include img-rst;
-            }
-
-            &__btn{
-                p{
-                    margin: 0;
-                }
-                @include btn-rst;
-
-                &__title{
-                    p{
-                        @include title_p-rst;
-                    }
-                    font-weight: bold;
-
-                    &__loc{
-                        p{
-                            @include loc_p-rst;
-                        }
-
-                        &__ico{
-                            z-index: auto;
-                            @include ico-rst;
-                            &:hover{
-                                display: none;
-                            }
-
-                            &--modif{
-                                z-index: auto;
-                                @include ico-rst;
-                                opacity: 0; 
-                                &:hover{
-                                    opacity: 1;
-                                    @include ico-rst-fly;
-                                }
-                            }
-                        }
-                    }
-                }
+                @include card-img;
             }
         }
-    }
 
-    .restaurant__2{
-    @include card-rst;
-
-        &--img{
-            img{
-                @include img-rst;
+        &__btn{
+            p{
+                margin: 0;
             }
+            @include card-btn;
+        }
 
-            &__btn{
-                p{
-                    margin: 0;
-                }
-                @include btn-rst;
+        &__title{
+            p{
+                @include card-title;
+            }
+            font-weight: bold;
+        }
 
-                &__title{
-                    p{
-                        @include title_p-rst;
-                    }
-                    font-weight: bold;
-
-                    &__loc{
-                        p{
-                            @include loc_p-rst;
-                        }
-
-                        &__ico{
-                            @include ico-rst;
-
-                            &--modif{
-                                @include ico-rst;
-                                opacity: 0; 
-                                &:hover{
-                                    opacity: 1;
-                                    @include ico-rst-fly;
-                                }
-                            }
-                        }
-                    }
-                }
+        &__location{
+            p{
+                @include card-location;
             }
         }
-    }
 
-    .restaurant__3{
-    @include card-rst;
-
-        &--img{
-            img{
-                @include img-rst;
+        &__icon{
+            z-index: auto;
+            @include card-icon;
+            &:hover{
+                display: none;
             }
 
-            &__btn{
-                p{
-                    margin: 0;
-                }
-                @include btn-rst;
-
-                &__title{
-                    p{
-                        @include title_p-rst;
-                    }
-                    font-weight: bold;
-
-                    &__loc{
-                        p{
-                            @include loc_p-rst;
-                        }
-
-                        &__ico{
-                            @include ico-rst;
-
-                            &--modif{
-                                @include ico-rst;
-                                opacity: 0;
-                                &:hover{
-                                    opacity: 1;
-                                    @include ico-rst-fly;
-                                }
-                            }
-                        }                            
-                    }
-                }
-            }
-        }
-    }
-
-    .restaurant__4{
-    @include card-rst;
-
-        &--img{
-            img{
-                @include img-rst;
-            }
-
-            &__btn{
-                p{
-                    margin: 0;
-                }
-                @include btn-rst;
-
-                &__title{
-                    p{
-                        @include title_p-rst;
-                    }
-                    font-weight: bold;
-
-                    &__loc{
-                        p{
-                            @include loc_p-rst;
-                        }
-
-                        &__ico{
-                            @include ico-rst;
-
-                            &--modif{
-                                @include ico-rst;
-                                opacity: 0;
-                                &:hover{
-                                    opacity: 1;
-                                    @include ico-rst-fly;
-                                }
-                            }
-                        }
-                    }
+            &--modif{
+                z-index: auto;
+                @include card-icon;
+                opacity: 0;
+                &:hover{
+                    opacity: 1;
+                    @include card-icon-fly;
                 }
             }
         }

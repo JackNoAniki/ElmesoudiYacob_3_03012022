@@ -12,17 +12,17 @@
         margin-top: 0;
         margin-left: 30px;
         margin-right: 30px;
+    }
         
-        &__txt{
-            font-size: 18px;
-            margin-top: 0;
-            margin-bottom: 10px;
-            margin-left: 20px;
-            margin-right: 30px;
-            
-            &--btn{
-                @include bouton;
-            }
-        }
+    &__txt{
+        font-size: 18px;
+        margin-top: 0;
+        margin-bottom: 10px;
+        margin-left: 20px;
+        margin-right: 30px;
+    }
+    
+    &--btn{
+        @include bouton;
     }
 }
