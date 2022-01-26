@@ -1,8 +1,6 @@
 /* Mixins restaurant */
 @mixin restaurant-block{
         position: relative;
-        width: 335px;
-
         background-color: $bg-color-block;
         padding-left: 20px;
         padding-right: 20px;
@@ -10,6 +8,27 @@
         padding-bottom: 15px;
         border-radius: 40px 40px 0 0;
 }
+
+@mixin restaurant-block-card-animation
+{
+    &__slideshow{
+    position: absolute;
+    right: -3px;
+    top: 0px;
+    color: #ffff;
+    background: $color-tertiary;
+    padding: 19px;
+    border-radius: 0 20px 20px 0;
+    opacity: 0;
+        &:hover{
+            opacity: 1;
+            animation-name: checkslide;
+            animation-duration: 0.5s;
+        }
+    }
+}
+
+
 
 @mixin restaurant-h3-specs{
     font-weight: normal;
@@ -27,24 +46,59 @@
 @mixin restaurant-h4-specs{
     margin-bottom: 8px;
     font-size: map-get($font-size, standard);
+    padding-top: 10px;
 }
 
 @mixin restaurant-food-specs{
+    position: relative;
+    padding-top: 5px;
+    padding-bottom: 10px;
     padding-left: 10px;
     background-color: #fff;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    margin-bottom: 10px;
     border-radius: 15px 15px 15px 15px;
     box-shadow: 0px 3px 3px 0px #C0C0C0;
 }
 
-@mixin restaurant-price-specs{
-    position: absolute;
-    top: 38px;
-    right: 22px;
-    font-weight: bold;
+@mixin restaurant-txt-overflow {
+    p {
+        width: 230px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-size: map-get($font-size, smaller);
+    }
 }
 
+@mixin restaurant-price-specs{
+    position: absolute;
+    font-weight: bold;
+    bottom: 10px;
+    right: 25px;
+}
+
+@mixin restaurant-price-click {
+    animation-name: priceslide;
+    animation-duration: 500ms;
+}
+
+@mixin restaurant-check-specs{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 30px;
+    color: #ffff;
+    background: $color-tertiary;
+    padding: 20px;
+    border-radius: 0 10px 10px 0;
+    opacity: 0;
+}
+
+@mixin restaurant-check-click {
+        opacity: 1;
+        animation-name: checkslide;
+        animation-duration: 0.5s;
+}
 
 
 /* Mixins footer */

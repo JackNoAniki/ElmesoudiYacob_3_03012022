@@ -14,6 +14,49 @@ footer .txt h3 {
 
 /* Mixins restaurant */
 /* Mixins footer */
+@keyframes checkslide {
+  0% {
+    width: 0px;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    width: 30px;
+    opacity: 1;
+    animation-fill-mode: forwards;
+  }
+}
+@keyframes priceslide {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-80px);
+    transform: translateX(-80px);
+  }
+}
+@keyframes txt-truncate {
+  0% {
+    width: 230px;
+  }
+  100% {
+    width: 180px;
+  }
+}
+@keyframes h4-truncate {
+  0% {
+    width: 300px;
+  }
+  100% {
+    width: 250px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
 * {
   margin: 0;
 }
@@ -44,7 +87,6 @@ footer .txt h3 {
 }
 .restaurant__block {
   position: relative;
-  width: 335px;
   background-color: #E9E9E9;
   padding-left: 20px;
   padding-right: 20px;
@@ -54,16 +96,6 @@ footer .txt h3 {
 }
 .restaurant__block__title {
   margin-bottom: 30px;
-}
-.restaurant__block__icon {
-  position: absolute;
-  top: 15px;
-  right: 25px;
-}
-.restaurant__block__icon--modif {
-  position: absolute;
-  top: 15px;
-  right: 25px;
 }
 .restaurant__block__card h3 {
   font-weight: normal;
@@ -77,25 +109,67 @@ footer .txt h3 {
   margin-top: 5px;
   margin-bottom: 15px;
 }
-.restaurant__block__card__txt {
-  margin-bottom: 10px;
+.restaurant__block__card__anchor {
+  text-decoration: none;
+  color: #000;
+  display: block;
   position: relative;
+}
+.restaurant__block__card__anchor:hover .restaurant__block__card__anchor__txt h4 {
+  animation-name: h4-truncate;
+  animation-duration: 500ms;
+}
+.restaurant__block__card__anchor:hover .restaurant__block__card__anchor__txt p {
+  animation-name: txt-truncate;
+  animation-duration: 500ms;
+}
+.restaurant__block__card__anchor:hover .restaurant__block__card__anchor__price {
+  animation-name: priceslide;
+  animation-duration: 500ms;
+}
+.restaurant__block__card__anchor:hover .restaurant__block__card__anchor__slideshow {
+  opacity: 1;
+  animation-name: checkslide;
+  animation-duration: 0.5s;
+}
+.restaurant__block__card__anchor__txt {
+  position: relative;
+  padding-top: 5px;
+  padding-bottom: 10px;
   padding-left: 10px;
   background-color: #fff;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  margin-bottom: 10px;
   border-radius: 15px 15px 15px 15px;
   box-shadow: 0px 3px 3px 0px #C0C0C0;
 }
-.restaurant__block__card__txt h4 {
+.restaurant__block__card__anchor__txt p {
+  width: 230px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 14px;
+}
+.restaurant__block__card__anchor__txt h4 {
   margin-bottom: 8px;
   font-size: 18px;
+  padding-top: 10px;
 }
-.restaurant__block__card__price {
+.restaurant__block__card__anchor__price {
   position: absolute;
-  top: 38px;
-  right: 22px;
   font-weight: bold;
+  bottom: 10px;
+  right: 25px;
+}
+.restaurant__block__card__anchor__slideshow {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 30px;
+  color: #ffff;
+  background: #99E2D0;
+  padding: 20px;
+  border-radius: 0 10px 10px 0;
+  opacity: 0;
 }
 .restaurant__block__card--btn {
   margin: 0;

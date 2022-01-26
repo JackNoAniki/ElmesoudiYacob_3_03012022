@@ -1,0 +1,83 @@
+.restaurant {
+    img {
+        display: block;
+        width: 375px;
+        margin-bottom: -35px;
+    }
+
+    &__block {
+        @include restaurant-block;
+
+        &__title {
+            margin-bottom: 30px;
+        }
+
+        &__icon {
+            
+                &--modif{
+                    
+                    }
+            }
+
+        &__card {
+            h3 {
+                @include restaurant-h3-specs;
+            }
+
+            &__anchor {
+                text-decoration: none;
+                color: #000;
+                display: block;
+                position: relative;
+
+                &:hover &__txt {
+
+                    h4 {
+                        animation-name: h4-truncate;
+                        animation-duration: 500ms;
+                    }
+                    p {
+                        animation-name: txt-truncate;
+                        animation-duration: 500ms;    
+                    }
+                }
+
+                &:hover &__price {
+                    @include restaurant-price-click;
+                }
+
+                &:hover &__slideshow {
+                    @include restaurant-check-click;
+                }
+
+                &__txt {
+                    @include restaurant-food-specs;
+                    @include restaurant-txt-overflow;
+
+                    h4 {
+                        @include restaurant-h4-specs;
+                    }
+                }
+
+                &__price {
+                    @include restaurant-price-specs;
+                }
+
+                &__slideshow{
+                    @include restaurant-check-specs;
+                }
+            }
+
+            &--btn {
+                @include bouton;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                a{
+                    text-decoration: none;
+                    text-align: center;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
