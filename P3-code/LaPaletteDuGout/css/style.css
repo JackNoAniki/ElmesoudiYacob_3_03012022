@@ -13,6 +13,7 @@ footer .txt h3 {
 }
 
 /* Mixins restaurant */
+/* Mixins animations */
 /* Mixins footer */
 @keyframes checkslide {
   0% {
@@ -57,6 +58,30 @@ footer .txt h3 {
     text-overflow: ellipsis;
   }
 }
+@keyframes scale-out-center {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+}
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 * {
   margin: 0;
 }
@@ -97,6 +122,31 @@ footer .txt h3 {
 .restaurant__block__title {
   margin-bottom: 30px;
 }
+.restaurant__block__icon {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+}
+.restaurant__block__icon:hover {
+  animation-name: scale-out-center;
+  animation-duration: 500ms;
+  animation-fill-mode: both;
+}
+.restaurant__block--modif {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  opacity: 0;
+}
+.restaurant__block--modif:hover {
+  animation-name: scale-in-center;
+  animation-duration: 500ms;
+  color: #9356DC;
+  background: -webkit-linear-gradient(355deg, #9356DC 51%, #FF79DA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-fill-mode: both;
+}
 .restaurant__block__card h3 {
   font-weight: normal;
   margin-top: 50px;
@@ -118,19 +168,23 @@ footer .txt h3 {
 .restaurant__block__card__anchor:hover .restaurant__block__card__anchor__txt h4 {
   animation-name: h4-truncate;
   animation-duration: 500ms;
+  animation-fill-mode: both;
 }
 .restaurant__block__card__anchor:hover .restaurant__block__card__anchor__txt p {
   animation-name: txt-truncate;
   animation-duration: 500ms;
+  animation-fill-mode: both;
 }
 .restaurant__block__card__anchor:hover .restaurant__block__card__anchor__price {
   animation-name: priceslide;
   animation-duration: 500ms;
+  animation-fill-mode: both;
 }
 .restaurant__block__card__anchor:hover .restaurant__block__card__anchor__slideshow {
   opacity: 1;
   animation-name: checkslide;
   animation-duration: 0.5s;
+  animation-fill-mode: both;
 }
 .restaurant__block__card__anchor__txt {
   position: relative;

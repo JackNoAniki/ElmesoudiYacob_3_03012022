@@ -13,11 +13,23 @@
         }
 
         &__icon {
-            
-                &--modif{
-                    
-                    }
+            @include restaurant-heart;
+
+                &:hover {
+                    @include heart-disapear;
+                    animation-fill-mode: both;
+                }
+        }
+
+        &--modif{
+            @include restaurant-heart;
+            opacity: 0;
+
+            &:hover {
+                @include heart-appear;
+                animation-fill-mode: both;
             }
+        }
 
         &__card {
             h3 {
@@ -33,21 +45,19 @@
                 &:hover &__txt {
 
                     h4 {
-                        animation-name: h4-truncate;
-                        animation-duration: 500ms;
+                        @include restaurant-h4-animation;
                     }
                     p {
-                        animation-name: txt-truncate;
-                        animation-duration: 500ms;    
+                        @include restaurant-txt-animation;
                     }
                 }
 
                 &:hover &__price {
-                    @include restaurant-price-click;
+                    @include restaurant-price-animation;
                 }
 
                 &:hover &__slideshow {
-                    @include restaurant-check-click;
+                    @include restaurant-check-animation;
                 }
 
                 &__txt {

@@ -1,5 +1,5 @@
 /* Mixins restaurant */
-@mixin restaurant-block{
+@mixin restaurant-block {
         position: relative;
         background-color: $bg-color-block;
         padding-left: 20px;
@@ -9,31 +9,30 @@
         border-radius: 40px 40px 0 0;
 }
 
-@mixin restaurant-block-card-animation
-{
-    &__slideshow{
+@mixin restaurant-heart {
     position: absolute;
-    right: -3px;
-    top: 0px;
-    color: #ffff;
-    background: $color-tertiary;
-    padding: 19px;
-    border-radius: 0 20px 20px 0;
-    opacity: 0;
-        &:hover{
-            opacity: 1;
-            animation-name: checkslide;
-            animation-duration: 0.5s;
-        }
-    }
+    top: 15px;
+    right: 25px;
 }
 
+@mixin heart-disapear {
+    animation-name: scale-out-center;
+    animation-duration: 500ms;
+}
 
+@mixin heart-appear {
+    animation-name: scale-in-center;
+    animation-duration: 500ms;
+    color: $color-primary;
+    background: -webkit-linear-gradient(355deg, $color-primary 51%, $color-secondary 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-@mixin restaurant-h3-specs{
+@mixin restaurant-h3-specs {
     font-weight: normal;
     margin-top: 50px;
-        &:after{
+        &:after {
             content:'';
             display: block;
             width: 15%;
@@ -43,13 +42,13 @@
         }
 }
 
-@mixin restaurant-h4-specs{
+@mixin restaurant-h4-specs {
     margin-bottom: 8px;
     font-size: map-get($font-size, standard);
     padding-top: 10px;
 }
 
-@mixin restaurant-food-specs{
+@mixin restaurant-food-specs {
     position: relative;
     padding-top: 5px;
     padding-bottom: 10px;
@@ -70,19 +69,14 @@
     }
 }
 
-@mixin restaurant-price-specs{
+@mixin restaurant-price-specs {
     position: absolute;
     font-weight: bold;
     bottom: 10px;
     right: 25px;
 }
 
-@mixin restaurant-price-click {
-    animation-name: priceslide;
-    animation-duration: 500ms;
-}
-
-@mixin restaurant-check-specs{
+@mixin restaurant-check-specs {
     position: absolute;
     top: 0px;
     right: 0px;
@@ -94,22 +88,44 @@
     opacity: 0;
 }
 
-@mixin restaurant-check-click {
-        opacity: 1;
-        animation-name: checkslide;
-        animation-duration: 0.5s;
+
+/* Mixins animations */
+@mixin restaurant-check-animation {
+    opacity: 1;
+    animation-name: checkslide;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+}
+
+@mixin restaurant-price-animation {
+    animation-name: priceslide;
+    animation-duration: 500ms;
+    animation-fill-mode: both;
+}
+
+@mixin restaurant-txt-animation {
+    animation-name: txt-truncate;
+    animation-duration: 500ms;
+    animation-fill-mode: both;
+}
+
+@mixin restaurant-h4-animation {
+    animation-name: h4-truncate;
+    animation-duration: 500ms;
+    animation-fill-mode: both;
 }
 
 
+
 /* Mixins footer */
-@mixin footer-link-logo{
-    a{
+@mixin footer-link-logo {
+    a {
         text-decoration: none;
         color: #fff;
         display: flex;
         margin-bottom: 10px;
 
-        p{
+        p {
             margin-bottom: 0;
             margin-top: 0;
             margin-left: 20px;
@@ -117,12 +133,12 @@
     }
 }
 
-@mixin footer-link{
-    a{
+@mixin footer-link {
+    a {
         text-decoration: none;
         color: #fff;
 
-        p{
+        p {
             margin-bottom: 10px;
             margin-top: 0;
         }
