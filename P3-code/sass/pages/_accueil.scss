@@ -1,0 +1,60 @@
+.restaurant{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background: $bg-color-block;
+    
+    h2{
+        margin-top: 0;
+        margin-bottom: 30px;
+        margin-left: 20px;
+    }
+
+    a{
+        text-decoration: none;
+        color: black;
+    }
+
+    &__card{
+    @include card-restaurant;
+
+        &--img{
+            img{
+                @include card-img;
+            }
+        }
+
+        &__btn{
+            p{
+                margin: 0;
+            }
+            @include card-btn;
+        }
+
+        &__title{
+            p{
+                @include card-title;
+            }
+            font-weight: bold;
+        }
+
+        &__location {
+            p {
+                @include card-location;
+            }
+        }
+
+        &__icon {
+            @include card-icon;
+
+            &:hover {
+                background: linear-gradient(355deg, $color-primary 36%, $color-secondary 83%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                -webkit-text-stroke: unset;
+                animation-name: scale-in-center;
+                animation-duration: 800ms;
+            }
+        }
+    }
+}

@@ -1,37 +1,48 @@
-.notice{
+.notice {
     margin-right: 20px;
     margin-left: 20px;
 
-    h2{
+    h2 {
         margin-top: 60px;
+        margin-bottom: 60px;
     }
     
-    p{
+    p {
         margin: 0;
     }
     
-    &__step{
+    &__step {
         position: relative;
         @include notice-btn;
 
-        &__number{
+        &__number {
             top: 15px;
             left: -10px;
             @include notice-number;
         }
 
-        &--i{
+        &--i {
             position: absolute;
             top: 25px;
-            left: map-get($notice-elm-pos, i-pos);
+            left: map-get($notice-element-position, icon-position);
+
+            &--modif {
+                position: absolute;
+                top: 25px;
+                left: map-get($notice-element-position, icon-position);
+                color: $color-primary;
+            }
         }
 
-        &__txt{
+        &__txt {
             position: absolute;
             font-weight: bold;
-            left: map-get($notice-elm-pos, txt-pos);
+            left: map-get($notice-element-position, txt-position);
             top: 25px;
             font-size: map-get($font-size, standard);
         }
+    }
+    :nth-child(0n+4) {
+        background-color: lighten($color-primary, 35%);
     }
 }

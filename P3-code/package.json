@@ -1,0 +1,11 @@
+{
+  "name": "p3",
+  "version": "1.0.0",
+  "description": "Site de réservation Ohmyfood, 1x accueil, 4x menus restaurants",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/_main.scss:./css/style.css"
+  },
+  "author": "EL MESOUDI Yacob",
+  "license": "ISC"
+}

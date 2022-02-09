@@ -1,0 +1,24 @@
+.restaurant-heading {
+    padding-bottom: 10px;
+    display: flex;
+    margin-bottom: 2px;
+    @include heading-shadow;
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+    &__arrow {
+        padding-top: 3px;
+        padding-left: 10px;
+        margin-right: auto;
+    }
+
+    &__logo {
+        margin-right: auto;
+        margin-left: -10px;
+        padding-top: 3px;
+        img {
+            width: 200px;
+        }
+    }
+}

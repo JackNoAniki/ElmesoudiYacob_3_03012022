@@ -1,0 +1,89 @@
+.main {
+    .cover-image img {
+        display: block;
+        width: 100%;
+        margin-bottom: -35px;
+    }
+
+    .restaurant {
+        @include restaurant-block;
+
+        &__title {
+            margin-bottom: 30px;
+        }
+
+        .heart-icon {
+            @include restaurant-heart;
+
+            &:hover {
+                background: linear-gradient(355deg, $color-primary 36%, $color-secondary 83%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                -webkit-text-stroke: unset;
+                animation-name: scale-in-center;
+                animation-duration: 800ms;
+            }
+        }
+
+        .menu-bloc {
+            h3 {
+                @include restaurant-h3-specs;
+            }
+
+            &__card {
+                text-decoration: none;
+                color: #000;
+                display: block;
+                position: relative;
+
+                &:active .menu-bloc__card__title {
+                    h4 {
+                        @include restaurant-h4-animation;
+                    }
+    
+                    p {
+                        @include restaurant-txt-animation;
+                    }
+                }
+
+                &:active .menu-bloc__card__price {
+                    @include restaurant-price-animation;
+                }
+
+                &:active .menu-bloc__card__icon {
+                    @include restaurant-check-animation;
+                }
+    
+                &__title {
+                    @include restaurant-food-specs;
+                    @include restaurant-txt-overflow;
+    
+                    h4 {
+                        @include restaurant-h4-specs;
+                    }
+                }
+    
+                &__price {
+                    @include restaurant-price-specs;
+                }
+    
+                &__icon {
+                    @include restaurant-check-specs;
+                }
+            }
+        }
+
+        &__btn {
+            @include bouton;
+            margin-top: 30px;
+            margin-bottom: 30px;
+
+            a {
+                text-decoration: none;
+                text-align: center;
+                color: #fff;
+            }
+        }
+    }
+}

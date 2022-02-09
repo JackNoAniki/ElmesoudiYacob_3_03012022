@@ -1,13 +1,14 @@
-.heading{
-    display: flex;
-    justify-content: center;
-    padding-bottom: 15px;
-    @include heading-shadow;
-    
-    @media screen and (max-width: 600px) {
-        img{
+.accueil-heading {
+    &__logo {
+        padding-bottom: 5px;
+        padding-top: 3px;
+        @include heading-shadow;
+        display: flex;
+        justify-content: space-around;
+
+        img {
             width: 200px;
-            margin-top: 10px;
+
         }
     }
-}
+} 
