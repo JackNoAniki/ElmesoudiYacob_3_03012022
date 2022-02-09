@@ -288,6 +288,8 @@ footer .txt h3 {
 .main .cover-image img {
   display: block;
   width: 100%;
+  height: 250px;
+  object-fit: cover;
   margin-bottom: -35px;
 }
 .main .restaurant {
