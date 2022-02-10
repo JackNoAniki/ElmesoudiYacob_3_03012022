@@ -63,15 +63,15 @@ footer .txt h3 {
     text-overflow: ellipsis;
   }
 }
-@keyframes scale-out-center {
+@keyframes fade-in-bottom {
   0% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    opacity: 1;
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: scale(0);
-    transform: scale(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -81,6 +81,22 @@ footer .txt h3 {
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 * {
@@ -177,6 +193,36 @@ footer .txt h3 {
   margin: 0;
   padding-left: 5px;
   font-weight: bold;
+}
+
+.loading {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #99E2D0;
+  opacity: 0.5;
+  z-index: 1;
+  animation-name: fade-out;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+}
+.loading .spinner {
+  display: flex;
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  width: 55px;
+  height: 55px;
+  border-style: solid;
+  border-color: #9356DC;
+  border-top-color: #FF79DA;
+  border-width: 4px;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
 }
 
 .accueil-heading__logo {
@@ -332,6 +378,18 @@ footer .txt h3 {
   border-bottom: 3px solid #99E2D0;
   margin-top: 5px;
   margin-bottom: 15px;
+}
+.main .restaurant .menu-bloc a:nth-child(2) {
+  animation-name: fade-in-bottom;
+  animation-duration: 200ms;
+}
+.main .restaurant .menu-bloc a:nth-child(3) {
+  animation-name: fade-in-bottom;
+  animation-duration: 600ms;
+}
+.main .restaurant .menu-bloc a:nth-child(4) {
+  animation-name: fade-in-bottom;
+  animation-duration: 1000ms;
 }
 .main .restaurant .menu-bloc__card {
   text-decoration: none;

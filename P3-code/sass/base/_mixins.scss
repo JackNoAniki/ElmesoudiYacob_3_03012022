@@ -254,3 +254,9 @@
     animation-duration: 500ms;
     animation-fill-mode: both;
 }
+
+@mixin restaurant-card-animation {
+    animation-name: scale-in-bottom;
+    animation-duration: 800ms;
+    animation-fill-mode: both;
+}

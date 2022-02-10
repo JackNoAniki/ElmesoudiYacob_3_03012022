@@ -33,6 +33,21 @@
                 @include restaurant-h3-specs;
             }
 
+            a:nth-child(2) {
+                animation-name: fade-in-bottom;
+                animation-duration: 200ms;
+            }
+
+            a:nth-child(3) {
+                animation-name: fade-in-bottom;
+                animation-duration: 600ms;
+            }
+
+            a:nth-child(4) {
+                animation-name: fade-in-bottom;
+                animation-duration: 1000ms;
+            }
+
             &__card {
                 text-decoration: none;
                 color: #000;

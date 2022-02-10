@@ -1,0 +1,28 @@
+.loading{
+    position:fixed;
+    width:100%;
+    left:0;right:0;top:0;bottom:0;
+    background: $color-tertiary;
+    opacity: 0.5;
+    z-index:1;
+    animation-name: fade-out;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+
+
+    .spinner {
+        display: flex;
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+        width: 55px;
+        height: 55px;
+        border-style: solid;
+        border-color: $color-primary;
+        border-top-color: $color-secondary;
+        border-width: 4px;
+        border-radius: 50%;
+        animation: spin .8s linear infinite;
+    }
+}
