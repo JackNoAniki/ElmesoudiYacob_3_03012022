@@ -97,6 +97,7 @@ footer .txt h3 {
   }
   100% {
     opacity: 0;
+    z-index: 0;
   }
 }
 * {
@@ -204,15 +205,14 @@ footer .txt h3 {
   bottom: 0;
   background: #99E2D0;
   opacity: 0.5;
-  z-index: 1;
+  z-index: 2;
   animation-name: fade-out;
   animation-duration: 3s;
   animation-fill-mode: both;
 }
 .loading .spinner {
-  display: flex;
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   top: 50%;
   left: 50%;
   width: 55px;
@@ -271,6 +271,13 @@ footer .txt h3 {
   background: linear-gradient(355deg, #9356DC 51%, #FF79DA 100%);
   border-radius: 30px 30px 30px 30px;
   color: #fff;
+}
+@media screen and (min-width: 768px) {
+  .description a .description--btn {
+    width: 335px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .notice {
@@ -338,6 +345,11 @@ footer .txt h3 {
   object-fit: cover;
   margin-bottom: -35px;
 }
+@media screen and (min-width: 768px) {
+  .main .cover-image img {
+    height: 350px;
+  }
+}
 .main .restaurant {
   position: relative;
   background-color: #E9E9E9;
@@ -367,58 +379,87 @@ footer .txt h3 {
   animation-name: scale-in-center;
   animation-duration: 800ms;
 }
-.main .restaurant .menu-bloc h3 {
+@media screen and (min-width: 768px) {
+  .main .restaurant .menu-flex {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}
+.main .restaurant .menu-flex .menu-bloc h3 {
   font-weight: normal;
   margin-top: 50px;
 }
-.main .restaurant .menu-bloc h3:after {
+.main .restaurant .menu-flex .menu-bloc h3:after {
   content: "";
   display: block;
-  width: 15%;
+  width: 30px;
   border-bottom: 3px solid #99E2D0;
   margin-top: 5px;
   margin-bottom: 15px;
 }
-.main .restaurant .menu-bloc a:nth-child(2) {
+@media (min-width: 768px) and (max-width: 1024px) {
+  .main .restaurant .menu-flex .menu-bloc h3 {
+    width: 335px;
+  }
+}
+.main .restaurant .menu-flex .menu-bloc a:nth-child(2) {
   animation-name: fade-in-bottom;
   animation-duration: 200ms;
+  animation-delay: 750ms;
 }
-.main .restaurant .menu-bloc a:nth-child(3) {
+.main .restaurant .menu-flex .menu-bloc a:nth-child(3) {
   animation-name: fade-in-bottom;
   animation-duration: 600ms;
+  animation-delay: 750ms;
 }
-.main .restaurant .menu-bloc a:nth-child(4) {
+.main .restaurant .menu-flex .menu-bloc a:nth-child(4) {
   animation-name: fade-in-bottom;
   animation-duration: 1000ms;
+  animation-delay: 750ms;
 }
-.main .restaurant .menu-bloc__card {
+@media screen and (min-width: 768px) {
+  .main .restaurant .menu-flex .menu-bloc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: column;
+    width: 335px;
+    flex-direction: row;
+  }
+}
+.main .restaurant .menu-flex .menu-bloc__card {
   text-decoration: none;
   color: #000;
   display: block;
   position: relative;
 }
-.main .restaurant .menu-bloc__card:active .menu-bloc__card__title h4 {
+@media screen and (min-width: 768px) {
+  .main .restaurant .menu-flex .menu-bloc__card {
+    width: 335px;
+  }
+}
+.main .restaurant .menu-flex .menu-bloc__card:active .menu-bloc__card__title h4 {
   animation-name: h4-truncate;
   animation-duration: 500ms;
   animation-fill-mode: both;
 }
-.main .restaurant .menu-bloc__card:active .menu-bloc__card__title p {
+.main .restaurant .menu-flex .menu-bloc__card:active .menu-bloc__card__title p {
   animation-name: txt-truncate;
   animation-duration: 500ms;
   animation-fill-mode: both;
 }
-.main .restaurant .menu-bloc__card:active .menu-bloc__card__price {
+.main .restaurant .menu-flex .menu-bloc__card:active .menu-bloc__card__price {
   animation-name: priceslide;
   animation-duration: 500ms;
   animation-fill-mode: both;
 }
-.main .restaurant .menu-bloc__card:active .menu-bloc__card__icon {
+.main .restaurant .menu-flex .menu-bloc__card:active .menu-bloc__card__icon {
   opacity: 1;
   animation-name: checkslide;
   animation-duration: 0.5s;
   animation-fill-mode: both;
 }
-.main .restaurant .menu-bloc__card__title {
+.main .restaurant .menu-flex .menu-bloc__card__title {
   position: relative;
   padding-top: 5px;
   padding-bottom: 10px;
@@ -428,24 +469,29 @@ footer .txt h3 {
   border-radius: 15px 15px 15px 15px;
   box-shadow: 0px 3px 3px 0px #C0C0C0;
 }
-.main .restaurant .menu-bloc__card__title p {
+.main .restaurant .menu-flex .menu-bloc__card__title p {
   width: 230px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.main .restaurant .menu-bloc__card__title h4 {
+.main .restaurant .menu-flex .menu-bloc__card__title h4 {
   margin-bottom: 8px;
   font-size: 18px;
   padding-top: 10px;
 }
-.main .restaurant .menu-bloc__card__price {
+.main .restaurant .menu-flex .menu-bloc__card__price {
   position: absolute;
   font-weight: bold;
   bottom: 10px;
   right: 25px;
 }
-.main .restaurant .menu-bloc__card__icon {
+@media screen and (min-width: 768px) {
+  .main .restaurant .menu-flex .menu-bloc__card__price {
+    bottom: 20px;
+  }
+}
+.main .restaurant .menu-flex .menu-bloc__card__icon {
   position: absolute;
   top: 0px;
   right: 0px;
@@ -468,6 +514,13 @@ footer .txt h3 {
   color: #fff;
   margin-top: 30px;
   margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .main .restaurant__btn {
+    width: 335px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .main .restaurant__btn a {
   text-decoration: none;

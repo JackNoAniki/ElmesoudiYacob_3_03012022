@@ -5,6 +5,10 @@
         height: 250px;
         object-fit: cover;
         margin-bottom: -35px;
+
+        @media screen and (min-width: 768px) {
+            height: 350px;
+        }
     }
 
     .restaurant {
@@ -28,65 +32,95 @@
             }
         }
 
-        .menu-bloc {
-            h3 {
-                @include restaurant-h3-specs;
-            }
-
-            a:nth-child(2) {
-                animation-name: fade-in-bottom;
-                animation-duration: 200ms;
-            }
-
-            a:nth-child(3) {
-                animation-name: fade-in-bottom;
-                animation-duration: 600ms;
-            }
-
-            a:nth-child(4) {
-                animation-name: fade-in-bottom;
-                animation-duration: 1000ms;
-            }
-
-            &__card {
-                text-decoration: none;
-                color: #000;
-                display: block;
-                position: relative;
-
-                &:active .menu-bloc__card__title {
-                    h4 {
-                        @include restaurant-h4-animation;
-                    }
+        .menu-flex {
+        @media screen and (min-width: 768px) {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+            .menu-bloc {
+                h3 {
+                    @include restaurant-h3-specs;
     
-                    p {
-                        @include restaurant-txt-animation;
-                    }
-                }
-
-                &:active .menu-bloc__card__price {
-                    @include restaurant-price-animation;
-                }
-
-                &:active .menu-bloc__card__icon {
-                    @include restaurant-check-animation;
-                }
-    
-                &__title {
-                    @include restaurant-food-specs;
-                    @include restaurant-txt-overflow;
-    
-                    h4 {
-                        @include restaurant-h4-specs;
+                    @media (min-width: 768px) and (max-width: 1024px) {
+                        width: 335px;
                     }
                 }
     
-                &__price {
-                    @include restaurant-price-specs;
+                a:nth-child(2) {
+                    animation-name: fade-in-bottom;
+                    animation-duration: 200ms;
+                    animation-delay: 750ms;
                 }
     
-                &__icon {
-                    @include restaurant-check-specs;
+                a:nth-child(3) {
+                    animation-name: fade-in-bottom;
+                    animation-duration: 600ms;
+                    animation-delay: 750ms;
+                }
+    
+                a:nth-child(4) {
+                    animation-name: fade-in-bottom;
+                    animation-duration: 1000ms;
+                    animation-delay: 750ms;
+                }
+    
+                @media screen and (min-width: 768px) {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: column;
+                    width: 335px;
+                    flex-direction: row;
+                }
+    
+                &__card {
+                    text-decoration: none;
+                    color: #000;
+                    display: block;
+                    position: relative;
+    
+                    @media screen and (min-width: 768px) {
+                        width: 335px;
+                    }
+    
+                    &:active .menu-bloc__card__title {
+                        h4 {
+                            @include restaurant-h4-animation;
+                        }
+        
+                        p {
+                            @include restaurant-txt-animation;
+                        }
+                    }
+    
+                    &:active .menu-bloc__card__price {
+                        @include restaurant-price-animation;
+                    }
+    
+                    &:active .menu-bloc__card__icon {
+                        @include restaurant-check-animation;
+                    }
+        
+                    &__title {
+                        @include restaurant-food-specs;
+                        @include restaurant-txt-overflow;
+        
+                        h4 {
+                            @include restaurant-h4-specs;
+                        }
+                    }
+        
+                    &__price {
+                        @include restaurant-price-specs;
+
+                        @media screen and (min-width: 768px) {
+                            bottom: 20px;
+                        }
+                    }
+        
+                    &__icon {
+                        @include restaurant-check-specs;
+                    }
                 }
             }
         }
@@ -95,6 +129,12 @@
             @include bouton;
             margin-top: 30px;
             margin-bottom: 30px;
+
+            @media screen and (min-width: 768px) {
+                width: 335px;
+                margin-left: auto;
+                margin-right: auto;
+            }
 
             a {
                 text-decoration: none;
