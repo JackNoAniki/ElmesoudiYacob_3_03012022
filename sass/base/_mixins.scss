@@ -175,7 +175,7 @@
     &:after {
         content: '';
         display: block;
-        width: 15%;
+        width: 30px;
         border-bottom: 3px solid $color-tertiary;
         margin-top: 5px;
         margin-bottom: 15px;
@@ -252,5 +252,11 @@
 @mixin restaurant-h4-animation {
     animation-name: h4-truncate;
     animation-duration: 500ms;
+    animation-fill-mode: both;
+}
+
+@mixin restaurant-card-animation {
+    animation-name: scale-in-bottom;
+    animation-duration: 800ms;
     animation-fill-mode: both;
 }

@@ -63,15 +63,15 @@ footer .txt h3 {
     text-overflow: ellipsis;
   }
 }
-@keyframes scale-out-center {
+@keyframes fade-in-bottom {
   0% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    opacity: 1;
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: scale(0);
-    transform: scale(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -81,6 +81,23 @@ footer .txt h3 {
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
   }
 }
 * {
@@ -179,6 +196,35 @@ footer .txt h3 {
   font-weight: bold;
 }
 
+.loading {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #99E2D0;
+  opacity: 0.5;
+  z-index: 2;
+  animation-name: fade-out;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+}
+.loading .spinner {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  width: 55px;
+  height: 55px;
+  border-style: solid;
+  border-color: #9356DC;
+  border-top-color: #FF79DA;
+  border-width: 4px;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
 .accueil-heading__logo {
   padding-bottom: 5px;
   padding-top: 3px;
@@ -226,14 +272,35 @@ footer .txt h3 {
   border-radius: 30px 30px 30px 30px;
   color: #fff;
 }
+@media screen and (min-width: 768px) {
+  .description a .description--btn {
+    width: 335px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
 .notice {
   margin-right: 20px;
   margin-left: 20px;
 }
+@media screen and (min-width: 768px) {
+  .notice {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
 .notice h2 {
   margin-top: 60px;
   margin-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .notice h2 {
+    display: flex;
+    width: 1900px;
+  }
 }
 .notice p {
   margin: 0;
@@ -248,8 +315,13 @@ footer .txt h3 {
   box-shadow: 1px 1px 3px 3px lightgray;
   margin-bottom: 20px;
 }
+@media screen and (min-width: 768px) {
+  .notice__step {
+    width: 335px;
+  }
+}
 .notice__step__number {
-  top: 15px;
+  top: 20px;
   left: -10px;
   position: absolute;
   font-weight: bold;
@@ -288,7 +360,14 @@ footer .txt h3 {
 .main .cover-image img {
   display: block;
   width: 100%;
+  height: 250px;
+  object-fit: cover;
   margin-bottom: -35px;
+}
+@media screen and (min-width: 768px) {
+  .main .cover-image img {
+    height: 350px;
+  }
 }
 .main .restaurant {
   position: relative;
@@ -319,46 +398,87 @@ footer .txt h3 {
   animation-name: scale-in-center;
   animation-duration: 800ms;
 }
-.main .restaurant .menu-bloc h3 {
+@media screen and (min-width: 768px) {
+  .main .restaurant .menu-flex {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}
+.main .restaurant .menu-flex .menu-bloc h3 {
   font-weight: normal;
   margin-top: 50px;
 }
-.main .restaurant .menu-bloc h3:after {
+.main .restaurant .menu-flex .menu-bloc h3:after {
   content: "";
   display: block;
-  width: 15%;
+  width: 30px;
   border-bottom: 3px solid #99E2D0;
   margin-top: 5px;
   margin-bottom: 15px;
 }
-.main .restaurant .menu-bloc__card {
+@media (min-width: 768px) and (max-width: 1024px) {
+  .main .restaurant .menu-flex .menu-bloc h3 {
+    width: 335px;
+  }
+}
+.main .restaurant .menu-flex .menu-bloc a:nth-child(2) {
+  animation-name: fade-in-bottom;
+  animation-duration: 200ms;
+  animation-delay: 750ms;
+}
+.main .restaurant .menu-flex .menu-bloc a:nth-child(3) {
+  animation-name: fade-in-bottom;
+  animation-duration: 600ms;
+  animation-delay: 750ms;
+}
+.main .restaurant .menu-flex .menu-bloc a:nth-child(4) {
+  animation-name: fade-in-bottom;
+  animation-duration: 1000ms;
+  animation-delay: 750ms;
+}
+@media screen and (min-width: 768px) {
+  .main .restaurant .menu-flex .menu-bloc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: column;
+    width: 335px;
+    flex-direction: row;
+  }
+}
+.main .restaurant .menu-flex .menu-bloc__card {
   text-decoration: none;
   color: #000;
   display: block;
   position: relative;
 }
-.main .restaurant .menu-bloc__card:active .menu-bloc__card__title h4 {
+@media screen and (min-width: 768px) {
+  .main .restaurant .menu-flex .menu-bloc__card {
+    width: 335px;
+  }
+}
+.main .restaurant .menu-flex .menu-bloc__card:active .menu-bloc__card__title h4 {
   animation-name: h4-truncate;
   animation-duration: 500ms;
   animation-fill-mode: both;
 }
-.main .restaurant .menu-bloc__card:active .menu-bloc__card__title p {
+.main .restaurant .menu-flex .menu-bloc__card:active .menu-bloc__card__title p {
   animation-name: txt-truncate;
   animation-duration: 500ms;
   animation-fill-mode: both;
 }
-.main .restaurant .menu-bloc__card:active .menu-bloc__card__price {
+.main .restaurant .menu-flex .menu-bloc__card:active .menu-bloc__card__price {
   animation-name: priceslide;
   animation-duration: 500ms;
   animation-fill-mode: both;
 }
-.main .restaurant .menu-bloc__card:active .menu-bloc__card__icon {
+.main .restaurant .menu-flex .menu-bloc__card:active .menu-bloc__card__icon {
   opacity: 1;
   animation-name: checkslide;
   animation-duration: 0.5s;
   animation-fill-mode: both;
 }
-.main .restaurant .menu-bloc__card__title {
+.main .restaurant .menu-flex .menu-bloc__card__title {
   position: relative;
   padding-top: 5px;
   padding-bottom: 10px;
@@ -368,24 +488,29 @@ footer .txt h3 {
   border-radius: 15px 15px 15px 15px;
   box-shadow: 0px 3px 3px 0px #C0C0C0;
 }
-.main .restaurant .menu-bloc__card__title p {
+.main .restaurant .menu-flex .menu-bloc__card__title p {
   width: 230px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.main .restaurant .menu-bloc__card__title h4 {
+.main .restaurant .menu-flex .menu-bloc__card__title h4 {
   margin-bottom: 8px;
   font-size: 18px;
   padding-top: 10px;
 }
-.main .restaurant .menu-bloc__card__price {
+.main .restaurant .menu-flex .menu-bloc__card__price {
   position: absolute;
   font-weight: bold;
   bottom: 10px;
   right: 25px;
 }
-.main .restaurant .menu-bloc__card__icon {
+@media screen and (min-width: 768px) {
+  .main .restaurant .menu-flex .menu-bloc__card__price {
+    bottom: 20px;
+  }
+}
+.main .restaurant .menu-flex .menu-bloc__card__icon {
   position: absolute;
   top: 0px;
   right: 0px;
@@ -408,6 +533,13 @@ footer .txt h3 {
   color: #fff;
   margin-top: 30px;
   margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .main .restaurant__btn {
+    width: 335px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .main .restaurant__btn a {
   text-decoration: none;

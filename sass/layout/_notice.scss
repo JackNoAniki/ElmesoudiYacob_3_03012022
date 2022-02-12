@@ -1,10 +1,20 @@
 .notice {
     margin-right: 20px;
     margin-left: 20px;
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
 
     h2 {
         margin-top: 60px;
         margin-bottom: 60px;
+        @media screen and(min-width: 768px) {
+            display: flex;
+            width: 1900px;
+        }
     }
     
     p {
@@ -15,8 +25,12 @@
         position: relative;
         @include notice-btn;
 
+        @media screen and (min-width: 768px) {
+            width: 335px;
+        }
+
         &__number {
-            top: 15px;
+            top: 20px;
             left: -10px;
             @include notice-number;
         }
