@@ -2,8 +2,8 @@ bower_components
 node_modules/
 package-lock.json
 .sass-cache
-.DS_Store
-.images
-.Maquettes Ohmyfood
-.P3-code
+DS_Store
+images
+Maquettes Ohmyfood
+P3-code
 DW+P3+-+Brief+creatif+-+Ohmyfood!
