@@ -72,6 +72,12 @@
                     animation-duration: 1000ms;
                     animation-delay: 750ms;
                 }
+
+                a:nth-child(5) {
+                    animation-name: fade-in-bottom;
+                    animation-duration: 1400ms;
+                    animation-delay: 750ms;
+                }
     
                 @media screen and (min-width: 768px) {
                     display: flex;

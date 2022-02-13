@@ -281,7 +281,7 @@ footer .txt h3 {
   margin-right: 70px;
   margin-left: 70px;
   font-weight: bold;
-  background: linear-gradient(355deg, #9356DC 51%, #FF79DA 100%);
+  background: linear-gradient(355deg, #9356DC 36%, #FF79DA 83%);
   border-radius: 30px 30px 30px 30px;
   color: #fff;
 }
@@ -457,6 +457,11 @@ footer .txt h3 {
   animation-duration: 1000ms;
   animation-delay: 750ms;
 }
+.main .restaurant .menu-flex .menu-bloc a:nth-child(5) {
+  animation-name: fade-in-bottom;
+  animation-duration: 1400ms;
+  animation-delay: 750ms;
+}
 @media screen and (min-width: 768px) {
   .main .restaurant .menu-flex .menu-bloc {
     display: flex;
@@ -585,7 +590,7 @@ footer .txt h3 {
   margin-right: 70px;
   margin-left: 70px;
   font-weight: bold;
-  background: linear-gradient(355deg, #9356DC 51%, #FF79DA 100%);
+  background: linear-gradient(355deg, #9356DC 36%, #FF79DA 83%);
   border-radius: 30px 30px 30px 30px;
   color: #fff;
   margin-top: 30px;
