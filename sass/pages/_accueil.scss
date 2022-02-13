@@ -1,4 +1,4 @@
-.restaurant{
+.restaurant {
     padding-top: 40px;
     padding-bottom: 40px;
     background: $bg-color-block;
@@ -9,7 +9,7 @@
         justify-content: space-around;
     }
     
-    h2{
+    h2 {
         margin-top: 0;
         margin-bottom: 30px;
         margin-left: 20px;
@@ -19,29 +19,30 @@
         }
     }
 
-    a{
+    a {
         text-decoration: none;
         color: black;
     }
 
     &__card{
-    @include card-restaurant;
+        @include card-restaurant;
+        @include shadow;
 
-        &--img{
-            img{
+        &--img {
+            img {
                 @include card-img;
             }
         }
 
-        &__btn{
-            p{
+        &__btn {
+            p {
                 margin: 0;
             }
             @include card-btn;
         }
 
-        &__title{
-            p{
+        &__title {
+            p {
                 @include card-title;
             }
             font-weight: bold;
