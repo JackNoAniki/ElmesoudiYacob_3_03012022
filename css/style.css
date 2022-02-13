@@ -109,10 +109,23 @@ footer .txt h3 {
   padding-bottom: 40px;
   background: #E9E9E9;
 }
+@media screen and (min-width: 768px) {
+  .restaurant {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
 .restaurant h2 {
   margin-top: 0;
   margin-bottom: 30px;
   margin-left: 20px;
+}
+@media screen and (min-width: 768px) {
+  .restaurant h2 {
+    display: flex;
+    width: 1900px;
+  }
 }
 .restaurant a {
   text-decoration: none;
@@ -380,6 +393,11 @@ footer .txt h3 {
 }
 .main .restaurant__title {
   margin-bottom: 30px;
+  display: flex;
+  width: 1900px;
+}
+.main .restaurant__title h2 {
+  width: 300px;
 }
 .main .restaurant .heart-icon {
   position: absolute;
@@ -401,8 +419,10 @@ footer .txt h3 {
 @media screen and (min-width: 768px) {
   .main .restaurant .menu-flex {
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
+    width: 1900px;
   }
 }
 .main .restaurant .menu-flex .menu-bloc h3 {
@@ -579,10 +599,26 @@ footer {
 footer .txt {
   margin-left: 20px;
 }
+@media screen and (min-width: 768px) {
+  footer .txt {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1900px;
+    margin-right: 20px;
+  }
+}
 footer .txt h3 {
   color: #fff;
   font-size: 20px;
   font-weight: normal;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  footer .txt h3 {
+    width: 1900px;
+  }
 }
 footer .txt__link1 a {
   text-decoration: none;
