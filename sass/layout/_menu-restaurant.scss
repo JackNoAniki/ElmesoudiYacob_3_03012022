@@ -89,6 +89,9 @@
     
                     @media screen and (min-width: 768px) {
                         width: 335px;
+                        display: flex;
+                        justify-content: stretch;
+                        flex-direction: column;
                     }
     
                     &:active .menu-bloc__card__title {
@@ -104,7 +107,11 @@
                     &:active .menu-bloc__card__price {
                         @include restaurant-price-animation;
                     }
-    
+                    
+                    &:active .menu-bloc__card__price--modif {
+                        @include restaurant-price-animation;
+                    }
+
                     &:active .menu-bloc__card__icon {
                         @include restaurant-check-animation;
                     }
@@ -123,10 +130,25 @@
 
                         @media screen and (min-width: 768px) {
                             bottom: 20px;
+                        }
 
-                            &--modif {
-                                @include restaurant-price-specs;
+                        &--modif {
+                            @include restaurant-price-specs;
+
+                            @media screen and (min-width: 768px) {
                                 bottom: 40px;
+                            }
+
+                            &-self {
+                                @media screen and (min-width: 768px) and (max-width: 1044px) {
+                                    @include restaurant-price-specs;
+                                    bottom: 20px;
+                                }
+
+                                @media screen and (min-width: 1045px) {
+                                    @include restaurant-price-specs;
+                                    bottom: 40px;
+                                }
                             }
                         }
                     }
