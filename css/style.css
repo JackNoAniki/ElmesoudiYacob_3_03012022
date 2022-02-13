@@ -109,10 +109,23 @@ footer .txt h3 {
   padding-bottom: 40px;
   background: #E9E9E9;
 }
+@media screen and (min-width: 768px) {
+  .restaurant {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
 .restaurant h2 {
   margin-top: 0;
   margin-bottom: 30px;
   margin-left: 20px;
+}
+@media screen and (min-width: 768px) {
+  .restaurant h2 {
+    display: flex;
+    width: 1900px;
+  }
 }
 .restaurant a {
   text-decoration: none;
