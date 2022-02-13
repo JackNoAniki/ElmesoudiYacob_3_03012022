@@ -475,6 +475,9 @@ footer .txt h3 {
 @media screen and (min-width: 768px) {
   .main .restaurant .menu-flex .menu-bloc__card {
     width: 335px;
+    display: flex;
+    justify-content: stretch;
+    flex-direction: column;
   }
 }
 .main .restaurant .menu-flex .menu-bloc__card:active .menu-bloc__card__title h4 {
@@ -488,6 +491,11 @@ footer .txt h3 {
   animation-fill-mode: both;
 }
 .main .restaurant .menu-flex .menu-bloc__card:active .menu-bloc__card__price {
+  animation-name: priceslide;
+  animation-duration: 500ms;
+  animation-fill-mode: both;
+}
+.main .restaurant .menu-flex .menu-bloc__card:active .menu-bloc__card__price--modif {
   animation-name: priceslide;
   animation-duration: 500ms;
   animation-fill-mode: both;
@@ -529,7 +537,29 @@ footer .txt h3 {
   .main .restaurant .menu-flex .menu-bloc__card__price {
     bottom: 20px;
   }
+}
+.main .restaurant .menu-flex .menu-bloc__card__price--modif {
+  position: absolute;
+  font-weight: bold;
+  bottom: 10px;
+  right: 25px;
+}
+@media screen and (min-width: 768px) {
   .main .restaurant .menu-flex .menu-bloc__card__price--modif {
+    bottom: 40px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1044px) {
+  .main .restaurant .menu-flex .menu-bloc__card__price--modif-self {
+    position: absolute;
+    font-weight: bold;
+    bottom: 10px;
+    right: 25px;
+    bottom: 20px;
+  }
+}
+@media screen and (min-width: 1045px) {
+  .main .restaurant .menu-flex .menu-bloc__card__price--modif-self {
     position: absolute;
     font-weight: bold;
     bottom: 10px;
