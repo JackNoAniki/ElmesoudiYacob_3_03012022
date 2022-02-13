@@ -393,6 +393,11 @@ footer .txt h3 {
 }
 .main .restaurant__title {
   margin-bottom: 30px;
+  display: flex;
+  width: 1900px;
+}
+.main .restaurant__title h2 {
+  width: 300px;
 }
 .main .restaurant .heart-icon {
   position: absolute;
@@ -414,8 +419,10 @@ footer .txt h3 {
 @media screen and (min-width: 768px) {
   .main .restaurant .menu-flex {
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
+    width: 1900px;
   }
 }
 .main .restaurant .menu-flex .menu-bloc h3 {
@@ -592,10 +599,26 @@ footer {
 footer .txt {
   margin-left: 20px;
 }
+@media screen and (min-width: 768px) {
+  footer .txt {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1900px;
+    margin-right: 20px;
+  }
+}
 footer .txt h3 {
   color: #fff;
   font-size: 20px;
   font-weight: normal;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  footer .txt h3 {
+    width: 1900px;
+  }
 }
 footer .txt__link1 a {
   text-decoration: none;

@@ -16,6 +16,12 @@
 
         &__title {
             margin-bottom: 30px;
+            display: flex;
+            width: 1900px;
+
+            h2 {
+                width: 300px;
+            }
         }
 
         .heart-icon {
@@ -35,8 +41,10 @@
         .menu-flex {
         @media screen and (min-width: 768px) {
             display: flex;
+            flex-direction: row;
             justify-content: space-around;
             flex-wrap: wrap;
+            width: 1900px;
         }
             .menu-bloc {
                 h3 {
