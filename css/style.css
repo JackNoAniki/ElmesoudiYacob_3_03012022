@@ -529,6 +529,13 @@ footer .txt h3 {
   .main .restaurant .menu-flex .menu-bloc__card__price {
     bottom: 20px;
   }
+  .main .restaurant .menu-flex .menu-bloc__card__price--modif {
+    position: absolute;
+    font-weight: bold;
+    bottom: 10px;
+    right: 25px;
+    bottom: 40px;
+  }
 }
 .main .restaurant .menu-flex .menu-bloc__card__icon {
   position: absolute;
