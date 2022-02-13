@@ -98,13 +98,14 @@
                         display: flex;
                         justify-content: stretch;
                         flex-direction: column;
+                        
                     }
     
                     &:active .menu-bloc__card__title {
                         h4 {
                             @include restaurant-h4-animation;
                         }
-        
+
                         p {
                             @include restaurant-txt-animation;
                         }
