@@ -22,11 +22,20 @@
     a {
         text-decoration: none;
         color: black;
+
+        &:hover {
+            @include growth;
+            
+        }
     }
 
     &__card{
         @include card-restaurant;
         @include shadow;
+
+        &:hover {
+            box-shadow: 1px 1px 5px 5px grey;
+        }
 
         &--img {
             img {
@@ -56,8 +65,12 @@
 
         &__icon {
             @include card-icon;
+        }
 
-            &:hover {
+        &-checkbox {
+            display: none;
+
+            &:checked + .restaurant__card__icon {
                 background: linear-gradient(355deg, $color-primary 36%, $color-secondary 83%);
                 background-clip: text;
                 -webkit-background-clip: text;
