@@ -47,6 +47,18 @@
             width: 1900px;
         }
             .menu-bloc {
+                &__checkbox {
+                    display: none;
+                    &:checked+.menu-bloc__card {
+                        .menu-bloc__card__price {
+                            @include restaurant-price-animation;
+                        }
+            
+                        .menu-bloc__card__icon {
+                            @include restaurant-check-animation;
+                        }
+                    }
+                }
                 h3 {
                     @include restaurant-h3-specs;
     
