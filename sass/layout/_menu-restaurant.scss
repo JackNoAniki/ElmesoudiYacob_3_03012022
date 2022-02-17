@@ -69,40 +69,11 @@
                         display: flex;
                         justify-content: stretch;
                         flex-direction: column;
-<<<<<<< HEAD
-=======
-                        
-                    }
-    
-                    /* &:active .menu-bloc__card__title {
-                        h4 {
-                            @include restaurant-h4-animation;
-                        }
-
-                        p {
-                            @include restaurant-txt-animation;
-                        }
-                    }
-    
-                    &:active .menu-bloc__card__price {
-                        @include restaurant-price-animation;
-                    }
-                    
-                    &:active .menu-bloc__card__price--modif {
-                        @include restaurant-price-animation;
->>>>>>> a809311 (commentaire de l'ancienne version)
                     }
                     display: block;
                     position: relative;
                     cursor: pointer;
 
-<<<<<<< HEAD
-=======
-                    &:active .menu-bloc__card__icon {
-                        @include restaurant-check-animation;
-                    } */
-        
->>>>>>> a809311 (commentaire de l'ancienne version)
                     &__title {
                         @include restaurant-food-specs;
                         @include restaurant-txt-overflow;
