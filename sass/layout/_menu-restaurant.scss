@@ -100,7 +100,7 @@
                         flex-direction: column;
                     }
     
-                    &:active .menu-bloc__card__title {
+                    /* &:active .menu-bloc__card__title {
                         h4 {
                             @include restaurant-h4-animation;
                         }
@@ -120,7 +120,7 @@
 
                     &:active .menu-bloc__card__icon {
                         @include restaurant-check-animation;
-                    }
+                    } */
         
                     &__title {
                         @include restaurant-food-specs;
