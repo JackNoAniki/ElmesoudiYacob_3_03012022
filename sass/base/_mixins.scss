@@ -124,19 +124,6 @@
     cursor: pointer;
 }
 
-@mixin card-icon-fly {
-    position: absolute;
-    top: 190px;
-    right: 25px;
-    color: $color-primary;
-    background: -webkit-linear-gradient(355deg, $color-primary 51%, $color-secondary 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transform: scale(1, 1.10);
-    transition-property: transform;
-    transition-duration: 400ms;
-}
-
 
 /* Mixins restaurant */
 @mixin restaurant-block {
