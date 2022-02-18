@@ -94,14 +94,6 @@
                         @media screen and (min-width: 768px) {
                             bottom: 20px;
                         }
-
-                        &--modif {
-                            @include restaurant-price-specs;
-
-                            @media screen and (min-width: 768px) {
-                                bottom: 20px;
-                            }
-                        }
                     }
 
                     &__icon {
