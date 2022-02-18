@@ -26,8 +26,12 @@
 
         .heart-icon {
             @include restaurant-heart;
+        }
 
-            &:hover {
+        .heart-checkbox {
+            display: none;
+
+            &:checked + .heart-icon {
                 background: linear-gradient(355deg, $color-primary 36%, $color-secondary 83%);
                 background-clip: text;
                 -webkit-background-clip: text;
@@ -37,6 +41,7 @@
                 animation-duration: 800ms;
             }
         }
+        
 
         .menu-flex {
         @media screen and (min-width: 768px) {
@@ -47,38 +52,6 @@
             width: 1900px;
         }
             .menu-bloc {
-                h3 {
-                    @include restaurant-h3-specs;
-    
-                    @media (min-width: 768px) and (max-width: 1024px) {
-                        width: 335px;
-                    }
-                }
-    
-                a:nth-child(2) {
-                    animation-name: fade-in-bottom;
-                    animation-duration: 200ms;
-                    animation-delay: 750ms;
-                }
-    
-                a:nth-child(3) {
-                    animation-name: fade-in-bottom;
-                    animation-duration: 600ms;
-                    animation-delay: 750ms;
-                }
-    
-                a:nth-child(4) {
-                    animation-name: fade-in-bottom;
-                    animation-duration: 1000ms;
-                    animation-delay: 750ms;
-                }
-
-                a:nth-child(5) {
-                    animation-name: fade-in-bottom;
-                    animation-duration: 1400ms;
-                    animation-delay: 750ms;
-                }
-    
                 @media screen and (min-width: 768px) {
                     display: flex;
                     flex-wrap: wrap;
@@ -86,43 +59,26 @@
                     width: 335px;
                     flex-direction: row;
                 }
+
+                h3 {
+                    @include restaurant-h3-specs;
     
+                    @media (min-width: 768px) and (max-width: 1024px) {
+                        width: 335px;
+                    }
+                }
+
                 &__card {
-                    text-decoration: none;
-                    color: #000;
-                    display: block;
-                    position: relative;
-    
                     @media screen and (min-width: 768px) {
                         width: 335px;
                         display: flex;
                         justify-content: stretch;
                         flex-direction: column;
-                        
                     }
-    
-                    /* &:active .menu-bloc__card__title {
-                        h4 {
-                            @include restaurant-h4-animation;
-                        }
+                    display: block;
+                    position: relative;
+                    cursor: pointer;
 
-                        p {
-                            @include restaurant-txt-animation;
-                        }
-                    }
-    
-                    &:active .menu-bloc__card__price {
-                        @include restaurant-price-animation;
-                    }
-                    
-                    &:active .menu-bloc__card__price--modif {
-                        @include restaurant-price-animation;
-                    }
-
-                    &:active .menu-bloc__card__icon {
-                        @include restaurant-check-animation;
-                    } */
-        
                     &__title {
                         @include restaurant-food-specs;
                         @include restaurant-txt-overflow;
@@ -138,34 +94,102 @@
                         @media screen and (min-width: 768px) {
                             bottom: 20px;
                         }
-
-                        &--modif {
-                            @include restaurant-price-specs;
-
-                            @media screen and (min-width: 768px) {
-                                bottom: 40px;
-                            }
-
-                            &-self {
-                                @media screen and (min-width: 768px) and (max-width: 1044px) {
-                                    @include restaurant-price-specs;
-                                    bottom: 20px;
-                                }
-
-                                @media screen and (min-width: 1045px) {
-                                    @include restaurant-price-specs;
-                                    bottom: 40px;
-                                }
-                            }
-                        }
                     }
-        
+
                     &__icon {
                         @include restaurant-check-specs;
                     }
                 }
+
+                &-checkbox {
+                    display: none;
+
+                    &:checked +.menu-bloc__card {
+                        .menu-bloc__card__title {
+                            h4 {
+                                @include restaurant-h4-animation;
+                            }
+    
+                            p {
+                                @include restaurant-txt-animation;
+                            }
+                        }
+                        .menu-bloc__card__price, .menu-bloc__card__price--modif {
+                            @include restaurant-price-animation;
+                        }
+
+                        .menu-bloc__card__icon {
+                            @include restaurant-check-animation;
+                            i {
+                                animation-name: spin;
+                                animation-duration: 500ms;
+                                animation-fill-mode: both;
+                            }
+                        }
+                    }
+
+                    &:not(:checked) +.menu-bloc__card {
+                        .menu-bloc__card__title {
+                            h4 {
+                                @include restaurant-h4-animation-reverse;
+                            }
+    
+                            p {
+                                @include restaurant-txt-animation-reverse;
+                            }
+                        }
+
+                        .menu-bloc__card__price, .menu-bloc__card__price--modif {
+                            @include restaurant-price-animation-reverse;
+                        }
+
+                        .menu-bloc__card__icon {
+                            @include restaurant-check-animation-reverse;
+
+                            i {
+                                animation-name: spin-reverse;
+                                animation-duration: 500ms;
+                                animation-fill-mode: both;
+                            }
+                        }
+                    }
+                }
+            }
+
+/* classes supplémentaires dédiées à l'animation fade-in bottom  optimale */
+            .first {
+                opacity: 0;
+                animation-name: fade-in-bottom;
+                animation-duration: 200ms;
+                animation-delay: 1000ms;
+                animation-fill-mode: both;
+            }
+            
+            .second {
+                opacity: 0;
+                animation-name: fade-in-bottom;
+                animation-duration: 600ms;
+                animation-delay: 1000ms;
+                animation-fill-mode: both;
+            }
+
+            .third {
+                opacity: 0;
+                animation-name: fade-in-bottom;
+                animation-duration: 1000ms;
+                animation-delay: 1000ms;
+                animation-fill-mode: both;
+            }
+
+            .fourth {
+                opacity: 0;
+                animation-name: fade-in-bottom;
+                animation-duration: 1400ms;
+                animation-delay: 1000ms;
+                animation-fill-mode: both;
             }
         }
+/* Fin de la note classes supplémentaires */
 
         &__btn {
             @include bouton;

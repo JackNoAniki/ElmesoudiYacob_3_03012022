@@ -217,8 +217,13 @@
 
 /* Mixins animations */
 @mixin restaurant-check-animation {
-    opacity: 1;
     animation-name: checkslide;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+}
+
+@mixin restaurant-check-animation-reverse {
+    animation-name: checkslide-reverse;
     animation-duration: 0.5s;
     animation-fill-mode: both;
 }
@@ -229,8 +234,20 @@
     animation-fill-mode: both;
 }
 
+@mixin restaurant-price-animation-reverse {
+    animation-name: priceslide-reverse;
+    animation-duration: 500ms;
+    animation-fill-mode: both;
+}
+
 @mixin restaurant-txt-animation {
     animation-name: txt-truncate;
+    animation-duration: 500ms;
+    animation-fill-mode: both;
+}
+
+@mixin restaurant-txt-animation-reverse {
+    animation-name: txt-truncate-reverse;
     animation-duration: 500ms;
     animation-fill-mode: both;
 }
@@ -241,8 +258,14 @@
     animation-fill-mode: both;
 }
 
-@mixin restaurant-card-animation {
-    animation-name: scale-in-bottom;
-    animation-duration: 800ms;
+@mixin restaurant-h4-animation-reverse {
+    animation-name: h4-truncate-reverse;
+    animation-duration: 500ms;
+    animation-fill-mode: both;
+}
+
+@mixin growth {
+    animation-name: scale-growth;
+    animation-duration: 300ms;
     animation-fill-mode: both;
 }

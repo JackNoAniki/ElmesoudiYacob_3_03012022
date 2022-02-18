@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 * {
@@ -34,6 +35,19 @@ footer .txt h3 {
     opacity: 1;
   }
 }
+@keyframes checkslide-reverse {
+  0% {
+    width: 30px;
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    width: 0px;
+    opacity: 0;
+  }
+}
 @keyframes priceslide {
   0% {
     -webkit-transform: translateX(0);
@@ -44,12 +58,30 @@ footer .txt h3 {
     transform: translateX(-80px);
   }
 }
+@keyframes priceslide-reverse {
+  0% {
+    -webkit-transform: translateX(-80px);
+    transform: translateX(-80px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
 @keyframes txt-truncate {
   0% {
     width: 230px;
   }
   100% {
     width: 180px;
+  }
+}
+@keyframes txt-truncate-reverse {
+  0% {
+    width: 180px;
+  }
+  100% {
+    width: 230px;
   }
 }
 @keyframes h4-truncate {
@@ -61,6 +93,17 @@ footer .txt h3 {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+  }
+}
+@keyframes h4-truncate-reverse {
+  0% {
+    width: 250px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  100% {
+    width: 300px;
   }
 }
 @keyframes fade-in-bottom {
@@ -91,6 +134,14 @@ footer .txt h3 {
     transform: rotate(360deg);
   }
 }
+@keyframes spin-reverse {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 @keyframes fade-out {
   0% {
     opacity: 1;
@@ -98,6 +149,14 @@ footer .txt h3 {
   100% {
     opacity: 0;
     visibility: hidden;
+  }
+}
+@keyframes scale-growth {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
   }
 }
 * {
@@ -131,6 +190,11 @@ footer .txt h3 {
   text-decoration: none;
   color: black;
 }
+.restaurant a:hover {
+  animation-name: scale-growth;
+  animation-duration: 300ms;
+  animation-fill-mode: both;
+}
 .restaurant__card {
   position: relative;
   margin-left: 20px;
@@ -140,6 +204,9 @@ footer .txt h3 {
   border-radius: 20px 20px 20px 20px;
   width: 335px;
   box-shadow: 1px 1px 5px 5px lightgray;
+}
+.restaurant__card:hover {
+  box-shadow: 1px 1px 5px 5px grey;
 }
 .restaurant__card--img img {
   width: 335px;
@@ -184,7 +251,10 @@ footer .txt h3 {
   -webkit-text-stroke-width: 3px;
   cursor: pointer;
 }
-.restaurant__card__icon:hover {
+.restaurant__card-checkbox {
+  display: none;
+}
+.restaurant__card-checkbox:checked + .restaurant__card__icon {
   background: linear-gradient(355deg, #9356DC 36%, #FF79DA 83%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -212,22 +282,20 @@ footer .txt h3 {
 .loading {
   position: fixed;
   width: 100%;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+  height: 100%;
   background: #99E2D0;
   opacity: 0.5;
   z-index: 2;
   animation-name: fade-out;
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-fill-mode: both;
 }
 .loading .spinner {
-  position: absolute;
+  position: relative;
   z-index: 3;
   top: 50%;
   left: 50%;
+  margin-left: -2em;
   width: 55px;
   height: 55px;
   border-style: solid;
@@ -390,6 +458,7 @@ footer .txt h3 {
   padding-top: 15px;
   padding-bottom: 15px;
   border-radius: 40px 40px 0 0;
+  /* Fin de la note classes supplémentaires */
 }
 .main .restaurant__title {
   margin-bottom: 30px;
@@ -407,7 +476,10 @@ footer .txt h3 {
   -webkit-text-stroke-width: 3px;
   cursor: pointer;
 }
-.main .restaurant .heart-icon:hover {
+.main .restaurant .heart-checkbox {
+  display: none;
+}
+.main .restaurant .heart-checkbox:checked + .heart-icon {
   background: linear-gradient(355deg, #9356DC 36%, #FF79DA 83%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -416,6 +488,9 @@ footer .txt h3 {
   animation-name: scale-in-center;
   animation-duration: 800ms;
 }
+.main .restaurant .menu-flex {
+  /* classes supplémentaires dédiées à l'animation fade-in bottom  optimale */
+}
 @media screen and (min-width: 768px) {
   .main .restaurant .menu-flex {
     display: flex;
@@ -423,6 +498,15 @@ footer .txt h3 {
     justify-content: space-around;
     flex-wrap: wrap;
     width: 1900px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .main .restaurant .menu-flex .menu-bloc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: column;
+    width: 335px;
+    flex-direction: row;
   }
 }
 .main .restaurant .menu-flex .menu-bloc h3 {
@@ -442,40 +526,10 @@ footer .txt h3 {
     width: 335px;
   }
 }
-.main .restaurant .menu-flex .menu-bloc a:nth-child(2) {
-  animation-name: fade-in-bottom;
-  animation-duration: 200ms;
-  animation-delay: 750ms;
-}
-.main .restaurant .menu-flex .menu-bloc a:nth-child(3) {
-  animation-name: fade-in-bottom;
-  animation-duration: 600ms;
-  animation-delay: 750ms;
-}
-.main .restaurant .menu-flex .menu-bloc a:nth-child(4) {
-  animation-name: fade-in-bottom;
-  animation-duration: 1000ms;
-  animation-delay: 750ms;
-}
-.main .restaurant .menu-flex .menu-bloc a:nth-child(5) {
-  animation-name: fade-in-bottom;
-  animation-duration: 1400ms;
-  animation-delay: 750ms;
-}
-@media screen and (min-width: 768px) {
-  .main .restaurant .menu-flex .menu-bloc {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: column;
-    width: 335px;
-    flex-direction: row;
-  }
-}
 .main .restaurant .menu-flex .menu-bloc__card {
-  text-decoration: none;
-  color: #000;
   display: block;
   position: relative;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .main .restaurant .menu-flex .menu-bloc__card {
@@ -484,32 +538,6 @@ footer .txt h3 {
     justify-content: stretch;
     flex-direction: column;
   }
-}
-.main .restaurant .menu-flex .menu-bloc__card:active .menu-bloc__card__title h4 {
-  animation-name: h4-truncate;
-  animation-duration: 500ms;
-  animation-fill-mode: both;
-}
-.main .restaurant .menu-flex .menu-bloc__card:active .menu-bloc__card__title p {
-  animation-name: txt-truncate;
-  animation-duration: 500ms;
-  animation-fill-mode: both;
-}
-.main .restaurant .menu-flex .menu-bloc__card:active .menu-bloc__card__price {
-  animation-name: priceslide;
-  animation-duration: 500ms;
-  animation-fill-mode: both;
-}
-.main .restaurant .menu-flex .menu-bloc__card:active .menu-bloc__card__price--modif {
-  animation-name: priceslide;
-  animation-duration: 500ms;
-  animation-fill-mode: both;
-}
-.main .restaurant .menu-flex .menu-bloc__card:active .menu-bloc__card__icon {
-  opacity: 1;
-  animation-name: checkslide;
-  animation-duration: 0.5s;
-  animation-fill-mode: both;
 }
 .main .restaurant .menu-flex .menu-bloc__card__title {
   position: relative;
@@ -543,35 +571,6 @@ footer .txt h3 {
     bottom: 20px;
   }
 }
-.main .restaurant .menu-flex .menu-bloc__card__price--modif {
-  position: absolute;
-  font-weight: bold;
-  bottom: 10px;
-  right: 25px;
-}
-@media screen and (min-width: 768px) {
-  .main .restaurant .menu-flex .menu-bloc__card__price--modif {
-    bottom: 40px;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1044px) {
-  .main .restaurant .menu-flex .menu-bloc__card__price--modif-self {
-    position: absolute;
-    font-weight: bold;
-    bottom: 10px;
-    right: 25px;
-    bottom: 20px;
-  }
-}
-@media screen and (min-width: 1045px) {
-  .main .restaurant .menu-flex .menu-bloc__card__price--modif-self {
-    position: absolute;
-    font-weight: bold;
-    bottom: 10px;
-    right: 25px;
-    bottom: 40px;
-  }
-}
 .main .restaurant .menu-flex .menu-bloc__card__icon {
   position: absolute;
   top: 0px;
@@ -582,6 +581,87 @@ footer .txt h3 {
   padding: 20px;
   border-radius: 0 10px 10px 0;
   opacity: 0;
+}
+.main .restaurant .menu-flex .menu-bloc-checkbox {
+  display: none;
+}
+.main .restaurant .menu-flex .menu-bloc-checkbox:checked + .menu-bloc__card .menu-bloc__card__title h4 {
+  animation-name: h4-truncate;
+  animation-duration: 500ms;
+  animation-fill-mode: both;
+}
+.main .restaurant .menu-flex .menu-bloc-checkbox:checked + .menu-bloc__card .menu-bloc__card__title p {
+  animation-name: txt-truncate;
+  animation-duration: 500ms;
+  animation-fill-mode: both;
+}
+.main .restaurant .menu-flex .menu-bloc-checkbox:checked + .menu-bloc__card .menu-bloc__card__price, .main .restaurant .menu-flex .menu-bloc-checkbox:checked + .menu-bloc__card .menu-bloc__card__price--modif {
+  animation-name: priceslide;
+  animation-duration: 500ms;
+  animation-fill-mode: both;
+}
+.main .restaurant .menu-flex .menu-bloc-checkbox:checked + .menu-bloc__card .menu-bloc__card__icon {
+  animation-name: checkslide;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+.main .restaurant .menu-flex .menu-bloc-checkbox:checked + .menu-bloc__card .menu-bloc__card__icon i {
+  animation-name: spin;
+  animation-duration: 500ms;
+  animation-fill-mode: both;
+}
+.main .restaurant .menu-flex .menu-bloc-checkbox:not(:checked) + .menu-bloc__card .menu-bloc__card__title h4 {
+  animation-name: h4-truncate-reverse;
+  animation-duration: 500ms;
+  animation-fill-mode: both;
+}
+.main .restaurant .menu-flex .menu-bloc-checkbox:not(:checked) + .menu-bloc__card .menu-bloc__card__title p {
+  animation-name: txt-truncate-reverse;
+  animation-duration: 500ms;
+  animation-fill-mode: both;
+}
+.main .restaurant .menu-flex .menu-bloc-checkbox:not(:checked) + .menu-bloc__card .menu-bloc__card__price, .main .restaurant .menu-flex .menu-bloc-checkbox:not(:checked) + .menu-bloc__card .menu-bloc__card__price--modif {
+  animation-name: priceslide-reverse;
+  animation-duration: 500ms;
+  animation-fill-mode: both;
+}
+.main .restaurant .menu-flex .menu-bloc-checkbox:not(:checked) + .menu-bloc__card .menu-bloc__card__icon {
+  animation-name: checkslide-reverse;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+.main .restaurant .menu-flex .menu-bloc-checkbox:not(:checked) + .menu-bloc__card .menu-bloc__card__icon i {
+  animation-name: spin-reverse;
+  animation-duration: 500ms;
+  animation-fill-mode: both;
+}
+.main .restaurant .menu-flex .first {
+  opacity: 0;
+  animation-name: fade-in-bottom;
+  animation-duration: 200ms;
+  animation-delay: 1000ms;
+  animation-fill-mode: both;
+}
+.main .restaurant .menu-flex .second {
+  opacity: 0;
+  animation-name: fade-in-bottom;
+  animation-duration: 600ms;
+  animation-delay: 1000ms;
+  animation-fill-mode: both;
+}
+.main .restaurant .menu-flex .third {
+  opacity: 0;
+  animation-name: fade-in-bottom;
+  animation-duration: 1000ms;
+  animation-delay: 1000ms;
+  animation-fill-mode: both;
+}
+.main .restaurant .menu-flex .fourth {
+  opacity: 0;
+  animation-name: fade-in-bottom;
+  animation-duration: 1400ms;
+  animation-delay: 1000ms;
+  animation-fill-mode: both;
 }
 .main .restaurant__btn {
   margin: 0;
