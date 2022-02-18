@@ -26,8 +26,12 @@
 
         .heart-icon {
             @include restaurant-heart;
+        }
 
-            &:hover {
+        .heart-checkbox {
+            display: none;
+
+            &:checked + .heart-icon {
                 background: linear-gradient(355deg, $color-primary 36%, $color-secondary 83%);
                 background-clip: text;
                 -webkit-background-clip: text;
@@ -37,6 +41,7 @@
                 animation-duration: 800ms;
             }
         }
+        
 
         .menu-flex {
         @media screen and (min-width: 768px) {
@@ -98,7 +103,7 @@
                             }
                         }
                     }
-        
+
                     &__icon {
                         @include restaurant-check-specs;
                     }
@@ -123,6 +128,11 @@
 
                         .menu-bloc__card__icon {
                             @include restaurant-check-animation;
+                            i {
+                                animation-name: spin;
+                                animation-duration: 500ms;
+                                animation-fill-mode: both;
+                            }
                         }
                     }
 
@@ -143,6 +153,12 @@
 
                         .menu-bloc__card__icon {
                             @include restaurant-check-animation-reverse;
+
+                            i {
+                                animation-name: spin-reverse;
+                                animation-duration: 500ms;
+                                animation-fill-mode: both;
+                            }
                         }
                     }
                 }
