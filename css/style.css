@@ -134,6 +134,14 @@ footer .txt h3 {
     transform: rotate(360deg);
   }
 }
+@keyframes spin-reverse {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 @keyframes fade-out {
   0% {
     opacity: 1;
@@ -468,7 +476,10 @@ footer .txt h3 {
   -webkit-text-stroke-width: 3px;
   cursor: pointer;
 }
-.main .restaurant .heart-icon:hover {
+.main .restaurant .heart-checkbox {
+  display: none;
+}
+.main .restaurant .heart-checkbox:checked + .heart-icon {
   background: linear-gradient(355deg, #9356DC 36%, #FF79DA 83%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -605,6 +616,11 @@ footer .txt h3 {
   animation-duration: 0.5s;
   animation-fill-mode: both;
 }
+.main .restaurant .menu-flex .menu-bloc-checkbox:checked + .menu-bloc__card .menu-bloc__card__icon i {
+  animation-name: spin;
+  animation-duration: 500ms;
+  animation-fill-mode: both;
+}
 .main .restaurant .menu-flex .menu-bloc-checkbox:not(:checked) + .menu-bloc__card .menu-bloc__card__title h4 {
   animation-name: h4-truncate-reverse;
   animation-duration: 500ms;
@@ -623,6 +639,11 @@ footer .txt h3 {
 .main .restaurant .menu-flex .menu-bloc-checkbox:not(:checked) + .menu-bloc__card .menu-bloc__card__icon {
   animation-name: checkslide-reverse;
   animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+.main .restaurant .menu-flex .menu-bloc-checkbox:not(:checked) + .menu-bloc__card .menu-bloc__card__icon i {
+  animation-name: spin-reverse;
+  animation-duration: 500ms;
   animation-fill-mode: both;
 }
 .main .restaurant .menu-flex .first {
