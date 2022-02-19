@@ -519,10 +519,10 @@ footer .txt h3 {
   display: block;
   position: relative;
   cursor: pointer;
+  width: 335px;
 }
 @media screen and (min-width: 768px) {
   .main .resto .menu-flex .menu-bloc__card {
-    width: 335px;
     display: flex;
     justify-content: stretch;
     flex-direction: column;
