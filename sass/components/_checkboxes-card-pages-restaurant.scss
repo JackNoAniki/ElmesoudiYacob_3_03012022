@@ -1,0 +1,55 @@
+.menu-bloc {
+    &-checkbox {
+        display: none;
+    
+        &:checked +.menu-bloc__card {
+            .menu-bloc__card__title {
+                h4 {
+                    @include restaurant-h4-animation;
+                }
+    
+                p {
+                    @include restaurant-txt-animation;
+                }
+            }
+            .menu-bloc__card__price, .menu-bloc__card__price--modif {
+                @include restaurant-price-animation;
+            }
+    
+            .menu-bloc__card__icon {
+                @include restaurant-check-animation;
+                i {
+                    animation-name: spin;
+                    animation-duration: 500ms;
+                    animation-fill-mode: both;
+                }
+            }
+        }
+    
+        &:not(:checked) +.menu-bloc__card {
+            .menu-bloc__card__title {
+                h4 {
+                    @include restaurant-h4-animation-reverse;
+                }
+    
+                p {
+                    @include restaurant-txt-animation-reverse;
+                }
+            }
+    
+            .menu-bloc__card__price, .menu-bloc__card__price--modif {
+                @include restaurant-price-animation-reverse;
+            }
+    
+            .menu-bloc__card__icon {
+                @include restaurant-check-animation-reverse;
+    
+                i {
+                    animation-name: spin-reverse;
+                    animation-duration: 500ms;
+                    animation-fill-mode: both;
+                }
+            }
+        }
+    }
+}

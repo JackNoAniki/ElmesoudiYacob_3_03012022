@@ -1,0 +1,35 @@
+.menu-bloc {
+    &__card {
+        display: block;
+        position: relative;
+        cursor: pointer;
+        width: 335px;
+    
+        @media screen and (min-width: 768px) {
+            display: flex;
+            justify-content: stretch;
+            flex-direction: column;
+        }
+    
+        &__title {
+            @include restaurant-food-specs;
+            @include restaurant-txt-overflow;
+    
+            h4 {
+                @include restaurant-h4-specs;
+            }
+        }
+    
+        &__price {
+            @include restaurant-price-specs;
+    
+            @media screen and (min-width: 768px) {
+                bottom: 20px;
+            }
+        }
+    
+        &__icon {
+            @include restaurant-check-specs;
+        }
+    }
+}

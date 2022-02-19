@@ -299,6 +299,117 @@ footer .txt h3 {
   animation: spin 0.8s linear infinite;
 }
 
+.menu-bloc__card {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  width: 335px;
+}
+@media screen and (min-width: 768px) {
+  .menu-bloc__card {
+    display: flex;
+    justify-content: stretch;
+    flex-direction: column;
+  }
+}
+.menu-bloc__card__title {
+  position: relative;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  background-color: #fff;
+  margin-bottom: 10px;
+  border-radius: 15px 15px 15px 15px;
+  box-shadow: 0px 3px 3px 0px #C0C0C0;
+}
+.menu-bloc__card__title p {
+  width: 230px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.menu-bloc__card__title h4 {
+  margin-bottom: 8px;
+  font-size: 18px;
+  padding-top: 10px;
+}
+.menu-bloc__card__price {
+  position: absolute;
+  font-weight: bold;
+  bottom: 10px;
+  right: 25px;
+}
+@media screen and (min-width: 768px) {
+  .menu-bloc__card__price {
+    bottom: 20px;
+  }
+}
+.menu-bloc__card__icon {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 30px;
+  color: #ffff;
+  background: #99E2D0;
+  padding: 20px;
+  border-radius: 0 10px 10px 0;
+  opacity: 0;
+}
+
+.menu-bloc-checkbox {
+  display: none;
+}
+.menu-bloc-checkbox:checked + .menu-bloc__card .menu-bloc__card__title h4 {
+  animation-name: h4-truncate;
+  animation-duration: 500ms;
+  animation-fill-mode: both;
+}
+.menu-bloc-checkbox:checked + .menu-bloc__card .menu-bloc__card__title p {
+  animation-name: txt-truncate;
+  animation-duration: 500ms;
+  animation-fill-mode: both;
+}
+.menu-bloc-checkbox:checked + .menu-bloc__card .menu-bloc__card__price, .menu-bloc-checkbox:checked + .menu-bloc__card .menu-bloc__card__price--modif {
+  animation-name: priceslide;
+  animation-duration: 500ms;
+  animation-fill-mode: both;
+}
+.menu-bloc-checkbox:checked + .menu-bloc__card .menu-bloc__card__icon {
+  animation-name: checkslide;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+.menu-bloc-checkbox:checked + .menu-bloc__card .menu-bloc__card__icon i {
+  animation-name: spin;
+  animation-duration: 500ms;
+  animation-fill-mode: both;
+}
+.menu-bloc-checkbox:not(:checked) + .menu-bloc__card .menu-bloc__card__title h4 {
+  animation-name: h4-truncate-reverse;
+  animation-duration: 500ms;
+  animation-fill-mode: both;
+}
+.menu-bloc-checkbox:not(:checked) + .menu-bloc__card .menu-bloc__card__title p {
+  animation-name: txt-truncate-reverse;
+  animation-duration: 500ms;
+  animation-fill-mode: both;
+}
+.menu-bloc-checkbox:not(:checked) + .menu-bloc__card .menu-bloc__card__price, .menu-bloc-checkbox:not(:checked) + .menu-bloc__card .menu-bloc__card__price--modif {
+  animation-name: priceslide-reverse;
+  animation-duration: 500ms;
+  animation-fill-mode: both;
+}
+.menu-bloc-checkbox:not(:checked) + .menu-bloc__card .menu-bloc__card__icon {
+  animation-name: checkslide-reverse;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+.menu-bloc-checkbox:not(:checked) + .menu-bloc__card .menu-bloc__card__icon i {
+  animation-name: spin-reverse;
+  animation-duration: 500ms;
+  animation-fill-mode: both;
+}
+
 .accueil-heading__logo {
   padding-bottom: 5px;
   padding-top: 3px;
@@ -514,115 +625,6 @@ footer .txt h3 {
   .main .resto .menu-flex .menu-bloc h3 {
     width: 335px;
   }
-}
-.main .resto .menu-flex .menu-bloc__card {
-  display: block;
-  position: relative;
-  cursor: pointer;
-  width: 335px;
-}
-@media screen and (min-width: 768px) {
-  .main .resto .menu-flex .menu-bloc__card {
-    display: flex;
-    justify-content: stretch;
-    flex-direction: column;
-  }
-}
-.main .resto .menu-flex .menu-bloc__card__title {
-  position: relative;
-  padding-top: 5px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  background-color: #fff;
-  margin-bottom: 10px;
-  border-radius: 15px 15px 15px 15px;
-  box-shadow: 0px 3px 3px 0px #C0C0C0;
-}
-.main .resto .menu-flex .menu-bloc__card__title p {
-  width: 230px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-.main .resto .menu-flex .menu-bloc__card__title h4 {
-  margin-bottom: 8px;
-  font-size: 18px;
-  padding-top: 10px;
-}
-.main .resto .menu-flex .menu-bloc__card__price {
-  position: absolute;
-  font-weight: bold;
-  bottom: 10px;
-  right: 25px;
-}
-@media screen and (min-width: 768px) {
-  .main .resto .menu-flex .menu-bloc__card__price {
-    bottom: 20px;
-  }
-}
-.main .resto .menu-flex .menu-bloc__card__icon {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  width: 30px;
-  color: #ffff;
-  background: #99E2D0;
-  padding: 20px;
-  border-radius: 0 10px 10px 0;
-  opacity: 0;
-}
-.main .resto .menu-flex .menu-bloc-checkbox {
-  display: none;
-}
-.main .resto .menu-flex .menu-bloc-checkbox:checked + .menu-bloc__card .menu-bloc__card__title h4 {
-  animation-name: h4-truncate;
-  animation-duration: 500ms;
-  animation-fill-mode: both;
-}
-.main .resto .menu-flex .menu-bloc-checkbox:checked + .menu-bloc__card .menu-bloc__card__title p {
-  animation-name: txt-truncate;
-  animation-duration: 500ms;
-  animation-fill-mode: both;
-}
-.main .resto .menu-flex .menu-bloc-checkbox:checked + .menu-bloc__card .menu-bloc__card__price, .main .resto .menu-flex .menu-bloc-checkbox:checked + .menu-bloc__card .menu-bloc__card__price--modif {
-  animation-name: priceslide;
-  animation-duration: 500ms;
-  animation-fill-mode: both;
-}
-.main .resto .menu-flex .menu-bloc-checkbox:checked + .menu-bloc__card .menu-bloc__card__icon {
-  animation-name: checkslide;
-  animation-duration: 0.5s;
-  animation-fill-mode: both;
-}
-.main .resto .menu-flex .menu-bloc-checkbox:checked + .menu-bloc__card .menu-bloc__card__icon i {
-  animation-name: spin;
-  animation-duration: 500ms;
-  animation-fill-mode: both;
-}
-.main .resto .menu-flex .menu-bloc-checkbox:not(:checked) + .menu-bloc__card .menu-bloc__card__title h4 {
-  animation-name: h4-truncate-reverse;
-  animation-duration: 500ms;
-  animation-fill-mode: both;
-}
-.main .resto .menu-flex .menu-bloc-checkbox:not(:checked) + .menu-bloc__card .menu-bloc__card__title p {
-  animation-name: txt-truncate-reverse;
-  animation-duration: 500ms;
-  animation-fill-mode: both;
-}
-.main .resto .menu-flex .menu-bloc-checkbox:not(:checked) + .menu-bloc__card .menu-bloc__card__price, .main .resto .menu-flex .menu-bloc-checkbox:not(:checked) + .menu-bloc__card .menu-bloc__card__price--modif {
-  animation-name: priceslide-reverse;
-  animation-duration: 500ms;
-  animation-fill-mode: both;
-}
-.main .resto .menu-flex .menu-bloc-checkbox:not(:checked) + .menu-bloc__card .menu-bloc__card__icon {
-  animation-name: checkslide-reverse;
-  animation-duration: 0.5s;
-  animation-fill-mode: both;
-}
-.main .resto .menu-flex .menu-bloc-checkbox:not(:checked) + .menu-bloc__card .menu-bloc__card__icon i {
-  animation-name: spin-reverse;
-  animation-duration: 500ms;
-  animation-fill-mode: both;
 }
 .main .resto .menu-flex .first {
   opacity: 0;
