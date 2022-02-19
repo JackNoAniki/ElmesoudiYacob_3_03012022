@@ -5,7 +5,7 @@
   font-family: "Roboto", sans-serif;
 }
 
-.restaurant__title h2 {
+.resto__title h2 {
   font-family: "Shrikhand", cursive;
   font-weight: normal;
 }
@@ -167,24 +167,17 @@ footer .txt h3 {
   padding-top: 40px;
   padding-bottom: 40px;
   background: #E9E9E9;
-}
-@media screen and (min-width: 768px) {
-  .restaurant {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
 }
 .restaurant h2 {
   margin-top: 0;
   margin-bottom: 30px;
   margin-left: 20px;
-}
-@media screen and (min-width: 768px) {
-  .restaurant h2 {
-    display: flex;
-    width: 1900px;
-  }
+  width: 100%;
 }
 .restaurant a {
   text-decoration: none;
@@ -450,7 +443,7 @@ footer .txt h3 {
     height: 350px;
   }
 }
-.main .restaurant {
+.main .resto {
   position: relative;
   background-color: #E9E9E9;
   padding-left: 20px;
@@ -460,15 +453,15 @@ footer .txt h3 {
   border-radius: 40px 40px 0 0;
   /* Fin de la note classes supplémentaires */
 }
-.main .restaurant__title {
+.main .resto__title {
   margin-bottom: 30px;
   display: flex;
-  width: 1900px;
+  width: 100%;
 }
-.main .restaurant__title h2 {
+.main .resto__title h2 {
   width: 300px;
 }
-.main .restaurant .heart-icon {
+.main .resto .heart-icon {
   position: absolute;
   top: 15px;
   right: 25px;
@@ -476,10 +469,10 @@ footer .txt h3 {
   -webkit-text-stroke-width: 3px;
   cursor: pointer;
 }
-.main .restaurant .heart-checkbox {
+.main .resto .heart-checkbox {
   display: none;
 }
-.main .restaurant .heart-checkbox:checked + .heart-icon {
+.main .resto .heart-checkbox:checked + .heart-icon {
   background: linear-gradient(355deg, #9356DC 36%, #FF79DA 83%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -488,32 +481,28 @@ footer .txt h3 {
   animation-name: scale-in-center;
   animation-duration: 800ms;
 }
-.main .restaurant .menu-flex {
+.main .resto .menu-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
   /* classes supplémentaires dédiées à l'animation fade-in bottom  optimale */
 }
 @media screen and (min-width: 768px) {
-  .main .restaurant .menu-flex {
+  .main .resto .menu-flex .menu-bloc {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
-    flex-wrap: wrap;
-    width: 1900px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .main .restaurant .menu-flex .menu-bloc {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: column;
     width: 335px;
-    flex-direction: row;
+    flex-direction: column;
   }
 }
-.main .restaurant .menu-flex .menu-bloc h3 {
+.main .resto .menu-flex .menu-bloc h3 {
   font-weight: normal;
   margin-top: 50px;
 }
-.main .restaurant .menu-flex .menu-bloc h3:after {
+.main .resto .menu-flex .menu-bloc h3:after {
   content: "";
   display: block;
   width: 30px;
@@ -522,24 +511,24 @@ footer .txt h3 {
   margin-bottom: 15px;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  .main .restaurant .menu-flex .menu-bloc h3 {
+  .main .resto .menu-flex .menu-bloc h3 {
     width: 335px;
   }
 }
-.main .restaurant .menu-flex .menu-bloc__card {
+.main .resto .menu-flex .menu-bloc__card {
   display: block;
   position: relative;
   cursor: pointer;
 }
 @media screen and (min-width: 768px) {
-  .main .restaurant .menu-flex .menu-bloc__card {
+  .main .resto .menu-flex .menu-bloc__card {
     width: 335px;
     display: flex;
     justify-content: stretch;
     flex-direction: column;
   }
 }
-.main .restaurant .menu-flex .menu-bloc__card__title {
+.main .resto .menu-flex .menu-bloc__card__title {
   position: relative;
   padding-top: 5px;
   padding-bottom: 10px;
@@ -549,29 +538,29 @@ footer .txt h3 {
   border-radius: 15px 15px 15px 15px;
   box-shadow: 0px 3px 3px 0px #C0C0C0;
 }
-.main .restaurant .menu-flex .menu-bloc__card__title p {
+.main .resto .menu-flex .menu-bloc__card__title p {
   width: 230px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.main .restaurant .menu-flex .menu-bloc__card__title h4 {
+.main .resto .menu-flex .menu-bloc__card__title h4 {
   margin-bottom: 8px;
   font-size: 18px;
   padding-top: 10px;
 }
-.main .restaurant .menu-flex .menu-bloc__card__price {
+.main .resto .menu-flex .menu-bloc__card__price {
   position: absolute;
   font-weight: bold;
   bottom: 10px;
   right: 25px;
 }
 @media screen and (min-width: 768px) {
-  .main .restaurant .menu-flex .menu-bloc__card__price {
+  .main .resto .menu-flex .menu-bloc__card__price {
     bottom: 20px;
   }
 }
-.main .restaurant .menu-flex .menu-bloc__card__icon {
+.main .resto .menu-flex .menu-bloc__card__icon {
   position: absolute;
   top: 0px;
   right: 0px;
@@ -582,88 +571,88 @@ footer .txt h3 {
   border-radius: 0 10px 10px 0;
   opacity: 0;
 }
-.main .restaurant .menu-flex .menu-bloc-checkbox {
+.main .resto .menu-flex .menu-bloc-checkbox {
   display: none;
 }
-.main .restaurant .menu-flex .menu-bloc-checkbox:checked + .menu-bloc__card .menu-bloc__card__title h4 {
+.main .resto .menu-flex .menu-bloc-checkbox:checked + .menu-bloc__card .menu-bloc__card__title h4 {
   animation-name: h4-truncate;
   animation-duration: 500ms;
   animation-fill-mode: both;
 }
-.main .restaurant .menu-flex .menu-bloc-checkbox:checked + .menu-bloc__card .menu-bloc__card__title p {
+.main .resto .menu-flex .menu-bloc-checkbox:checked + .menu-bloc__card .menu-bloc__card__title p {
   animation-name: txt-truncate;
   animation-duration: 500ms;
   animation-fill-mode: both;
 }
-.main .restaurant .menu-flex .menu-bloc-checkbox:checked + .menu-bloc__card .menu-bloc__card__price, .main .restaurant .menu-flex .menu-bloc-checkbox:checked + .menu-bloc__card .menu-bloc__card__price--modif {
+.main .resto .menu-flex .menu-bloc-checkbox:checked + .menu-bloc__card .menu-bloc__card__price, .main .resto .menu-flex .menu-bloc-checkbox:checked + .menu-bloc__card .menu-bloc__card__price--modif {
   animation-name: priceslide;
   animation-duration: 500ms;
   animation-fill-mode: both;
 }
-.main .restaurant .menu-flex .menu-bloc-checkbox:checked + .menu-bloc__card .menu-bloc__card__icon {
+.main .resto .menu-flex .menu-bloc-checkbox:checked + .menu-bloc__card .menu-bloc__card__icon {
   animation-name: checkslide;
   animation-duration: 0.5s;
   animation-fill-mode: both;
 }
-.main .restaurant .menu-flex .menu-bloc-checkbox:checked + .menu-bloc__card .menu-bloc__card__icon i {
+.main .resto .menu-flex .menu-bloc-checkbox:checked + .menu-bloc__card .menu-bloc__card__icon i {
   animation-name: spin;
   animation-duration: 500ms;
   animation-fill-mode: both;
 }
-.main .restaurant .menu-flex .menu-bloc-checkbox:not(:checked) + .menu-bloc__card .menu-bloc__card__title h4 {
+.main .resto .menu-flex .menu-bloc-checkbox:not(:checked) + .menu-bloc__card .menu-bloc__card__title h4 {
   animation-name: h4-truncate-reverse;
   animation-duration: 500ms;
   animation-fill-mode: both;
 }
-.main .restaurant .menu-flex .menu-bloc-checkbox:not(:checked) + .menu-bloc__card .menu-bloc__card__title p {
+.main .resto .menu-flex .menu-bloc-checkbox:not(:checked) + .menu-bloc__card .menu-bloc__card__title p {
   animation-name: txt-truncate-reverse;
   animation-duration: 500ms;
   animation-fill-mode: both;
 }
-.main .restaurant .menu-flex .menu-bloc-checkbox:not(:checked) + .menu-bloc__card .menu-bloc__card__price, .main .restaurant .menu-flex .menu-bloc-checkbox:not(:checked) + .menu-bloc__card .menu-bloc__card__price--modif {
+.main .resto .menu-flex .menu-bloc-checkbox:not(:checked) + .menu-bloc__card .menu-bloc__card__price, .main .resto .menu-flex .menu-bloc-checkbox:not(:checked) + .menu-bloc__card .menu-bloc__card__price--modif {
   animation-name: priceslide-reverse;
   animation-duration: 500ms;
   animation-fill-mode: both;
 }
-.main .restaurant .menu-flex .menu-bloc-checkbox:not(:checked) + .menu-bloc__card .menu-bloc__card__icon {
+.main .resto .menu-flex .menu-bloc-checkbox:not(:checked) + .menu-bloc__card .menu-bloc__card__icon {
   animation-name: checkslide-reverse;
   animation-duration: 0.5s;
   animation-fill-mode: both;
 }
-.main .restaurant .menu-flex .menu-bloc-checkbox:not(:checked) + .menu-bloc__card .menu-bloc__card__icon i {
+.main .resto .menu-flex .menu-bloc-checkbox:not(:checked) + .menu-bloc__card .menu-bloc__card__icon i {
   animation-name: spin-reverse;
   animation-duration: 500ms;
   animation-fill-mode: both;
 }
-.main .restaurant .menu-flex .first {
+.main .resto .menu-flex .first {
   opacity: 0;
   animation-name: fade-in-bottom;
   animation-duration: 200ms;
   animation-delay: 1000ms;
   animation-fill-mode: both;
 }
-.main .restaurant .menu-flex .second {
+.main .resto .menu-flex .second {
   opacity: 0;
   animation-name: fade-in-bottom;
   animation-duration: 600ms;
   animation-delay: 1000ms;
   animation-fill-mode: both;
 }
-.main .restaurant .menu-flex .third {
+.main .resto .menu-flex .third {
   opacity: 0;
   animation-name: fade-in-bottom;
   animation-duration: 1000ms;
   animation-delay: 1000ms;
   animation-fill-mode: both;
 }
-.main .restaurant .menu-flex .fourth {
+.main .resto .menu-flex .fourth {
   opacity: 0;
   animation-name: fade-in-bottom;
   animation-duration: 1400ms;
   animation-delay: 1000ms;
   animation-fill-mode: both;
 }
-.main .restaurant__btn {
+.main .resto__btn {
   margin: 0;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -677,13 +666,13 @@ footer .txt h3 {
   margin-bottom: 30px;
 }
 @media screen and (min-width: 768px) {
-  .main .restaurant__btn {
+  .main .resto__btn {
     width: 335px;
     margin-left: auto;
     margin-right: auto;
   }
 }
-.main .restaurant__btn a {
+.main .resto__btn a {
   text-decoration: none;
   text-align: center;
   color: #fff;
