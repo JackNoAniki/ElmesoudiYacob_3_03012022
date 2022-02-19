@@ -68,15 +68,16 @@
                 }
 
                 &__card {
+                    display: block;
+                    position: relative;
+                    cursor: pointer;
+                    width: 335px;
+
                     @media screen and (min-width: 768px) {
-                        width: 335px;
                         display: flex;
                         justify-content: stretch;
                         flex-direction: column;
                     }
-                    display: block;
-                    position: relative;
-                    cursor: pointer;
 
                     &__title {
                         @include restaurant-food-specs;
