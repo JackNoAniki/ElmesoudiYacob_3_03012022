@@ -18,11 +18,6 @@
     a {
         text-decoration: none;
         color: black;
-
-        &:hover {
-            @include growth;
-            
-        }
     }
 
     &__card {
@@ -31,6 +26,7 @@
 
         &:hover {
             box-shadow: 1px 1px 5px 5px grey;
+            @include growth;
         }
 
         &--img {
@@ -60,20 +56,22 @@
         }
 
         &__icon {
-            @include card-icon;
-        }
+            i {
+                @include card-icon;
+            }
 
-        &-checkbox {
-            display: none;
+            &-checkbox {
+                display: none;
 
-            &:checked + .restaurant__card__icon {
-                background: linear-gradient(355deg, $color-primary 36%, $color-secondary 83%);
-                background-clip: text;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                -webkit-text-stroke: unset;
-                animation-name: scale-in-center;
-                animation-duration: 800ms;
+                &:checked + i {
+                    background: linear-gradient(355deg, $color-primary 36%, $color-secondary 83%);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    -webkit-text-stroke: unset;
+                    animation-name: scale-in-center;
+                    animation-duration: 800ms;
+                }
             }
         }
     }

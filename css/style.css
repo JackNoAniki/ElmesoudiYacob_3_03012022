@@ -183,11 +183,6 @@ footer .txt h3 {
   text-decoration: none;
   color: black;
 }
-.restaurant a:hover {
-  animation-name: scale-growth;
-  animation-duration: 300ms;
-  animation-fill-mode: both;
-}
 .restaurant__card {
   position: relative;
   margin-left: 20px;
@@ -200,6 +195,9 @@ footer .txt h3 {
 }
 .restaurant__card:hover {
   box-shadow: 1px 1px 5px 5px grey;
+  animation-name: scale-growth;
+  animation-duration: 300ms;
+  animation-fill-mode: both;
 }
 .restaurant__card--img img {
   width: 335px;
@@ -236,7 +234,7 @@ footer .txt h3 {
   margin-top: 0;
   margin-bottom: 0;
 }
-.restaurant__card__icon {
+.restaurant__card__icon i {
   position: absolute;
   top: 190px;
   right: 25px;
@@ -244,10 +242,10 @@ footer .txt h3 {
   -webkit-text-stroke-width: 3px;
   cursor: pointer;
 }
-.restaurant__card-checkbox {
+.restaurant__card__icon-checkbox {
   display: none;
 }
-.restaurant__card-checkbox:checked + .restaurant__card__icon {
+.restaurant__card__icon-checkbox:checked + i {
   background: linear-gradient(355deg, #9356DC 36%, #FF79DA 83%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -296,7 +294,7 @@ footer .txt h3 {
   border-top-color: #FF79DA;
   border-width: 4px;
   border-radius: 50%;
-  animation: spin 0.8s linear infinite;
+  animation: spin 0.8s linear 3s;
 }
 
 .menu-bloc__card {
@@ -356,55 +354,52 @@ footer .txt h3 {
   opacity: 0;
 }
 
-.menu-bloc-checkbox {
-  display: none;
-}
-.menu-bloc-checkbox:checked + .menu-bloc__card .menu-bloc__card__title h4 {
+.menu-bloc__card:hover .menu-bloc__card__title h4 {
   animation-name: h4-truncate;
   animation-duration: 500ms;
   animation-fill-mode: both;
 }
-.menu-bloc-checkbox:checked + .menu-bloc__card .menu-bloc__card__title p {
+.menu-bloc__card:hover .menu-bloc__card__title p {
   animation-name: txt-truncate;
   animation-duration: 500ms;
   animation-fill-mode: both;
 }
-.menu-bloc-checkbox:checked + .menu-bloc__card .menu-bloc__card__price, .menu-bloc-checkbox:checked + .menu-bloc__card .menu-bloc__card__price--modif {
+.menu-bloc__card:hover .menu-bloc__card__price p, .menu-bloc__card:hover .menu-bloc__card__price--modif p {
   animation-name: priceslide;
   animation-duration: 500ms;
   animation-fill-mode: both;
 }
-.menu-bloc-checkbox:checked + .menu-bloc__card .menu-bloc__card__icon {
+.menu-bloc__card:hover .menu-bloc__card__icon {
   animation-name: checkslide;
   animation-duration: 0.5s;
   animation-fill-mode: both;
 }
-.menu-bloc-checkbox:checked + .menu-bloc__card .menu-bloc__card__icon i {
+.menu-bloc__card:hover .menu-bloc__card__icon i {
   animation-name: spin;
   animation-duration: 500ms;
   animation-fill-mode: both;
 }
-.menu-bloc-checkbox:not(:checked) + .menu-bloc__card .menu-bloc__card__title h4 {
+.menu-bloc__card:not(:hover) .menu-bloc__card__title h4 {
   animation-name: h4-truncate-reverse;
   animation-duration: 500ms;
   animation-fill-mode: both;
 }
-.menu-bloc-checkbox:not(:checked) + .menu-bloc__card .menu-bloc__card__title p {
+.menu-bloc__card:not(:hover) .menu-bloc__card__title p {
   animation-name: txt-truncate-reverse;
   animation-duration: 500ms;
   animation-fill-mode: both;
 }
-.menu-bloc-checkbox:not(:checked) + .menu-bloc__card .menu-bloc__card__price, .menu-bloc-checkbox:not(:checked) + .menu-bloc__card .menu-bloc__card__price--modif {
+.menu-bloc__card:not(:hover) .menu-bloc__card__price, .menu-bloc__card:not(:hover) .menu-bloc__card__price--modif {
   animation-name: priceslide-reverse;
   animation-duration: 500ms;
   animation-fill-mode: both;
 }
-.menu-bloc-checkbox:not(:checked) + .menu-bloc__card .menu-bloc__card__icon {
+.menu-bloc__card:not(:hover) .menu-bloc__card__icon {
   animation-name: checkslide-reverse;
   animation-duration: 0.5s;
   animation-fill-mode: both;
 }
-.menu-bloc-checkbox:not(:checked) + .menu-bloc__card .menu-bloc__card__icon i {
+.menu-bloc__card:not(:hover) .menu-bloc__card__icon i {
   animation-name: spin-reverse;
   animation-duration: 500ms;
   animation-fill-mode: both;
@@ -572,7 +567,7 @@ footer .txt h3 {
 .main .resto__title h2 {
   width: 300px;
 }
-.main .resto .heart-icon {
+.main .resto .heart-icon i {
   position: absolute;
   top: 15px;
   right: 25px;
@@ -580,10 +575,10 @@ footer .txt h3 {
   -webkit-text-stroke-width: 3px;
   cursor: pointer;
 }
-.main .resto .heart-checkbox {
+.main .resto .heart-icon-checkbox {
   display: none;
 }
-.main .resto .heart-checkbox:checked + .heart-icon {
+.main .resto .heart-icon-checkbox:checked + i {
   background: linear-gradient(355deg, #9356DC 36%, #FF79DA 83%);
   background-clip: text;
   -webkit-background-clip: text;

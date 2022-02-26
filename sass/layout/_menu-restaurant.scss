@@ -25,13 +25,15 @@
         }
 
         .heart-icon {
-            @include restaurant-heart;
+            i {
+                @include restaurant-heart;
+            }
         }
 
-        .heart-checkbox {
+        .heart-icon-checkbox {
             display: none;
 
-            &:checked + .heart-icon {
+            &:checked + i {
                 background: linear-gradient(355deg, $color-primary 36%, $color-secondary 83%);
                 background-clip: text;
                 -webkit-background-clip: text;
